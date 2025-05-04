@@ -1,3 +1,3 @@
-#OWL to PlantUML trasformation
+# OWL to PlantUML trasformation
 
-This Python program tranform a OWL model into a PlantUML file (generated with Claude support)
+This Python program transforms an OWL model into a PlantUML file (generated with Claude support)

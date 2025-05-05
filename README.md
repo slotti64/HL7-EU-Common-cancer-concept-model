@@ -12,3 +12,5 @@ From this UML model, a set of arifacts was generated:
 A Python program ([owl2plantuml_v17.py](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/tree/main/OWL2PlantUML/)) was created (with Claude) to transform the OWL2 file into PlantUML: 
 
 * [EUCM-v02.puml](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/EUCM-v02.puml)
+
+The model, currently in an early stage, aims to support automated mapping from concepts to resources using a combined model-driven and LLM approach. 

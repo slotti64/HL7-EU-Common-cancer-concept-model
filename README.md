@@ -9,6 +9,6 @@ From this UML model, a set of arifacts was generated:
 * [EuropeanCancerModel-v02.html](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/EuropeanCancerModel-v02.html) (Natural Language Web Glossary)
 * [Cancer Model Glossary-v02.xlsx](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/Cancer%20Model%20Glossary-v02.xlsx) (Excel Glossary)
 
-A Python program [owl2plantuml_v17.py](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/OWL2PlantUML/owl2plantuml_v17.py) was created (with Claude) to transform the OWL2 file into PlantUML: 
+A Python program [owl2plantuml_v17.py](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/tree/main)) was created (with Claude) to transform the OWL2 file into PlantUML: 
 
 * [EUCM-v02.puml](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/EUCM-v02.puml)

@@ -13,10 +13,11 @@ A Python program ([owl2plantuml_v17.py](https://github.com/slotti64/HL7-EU-Commo
 
 * [EUCM-v02.puml](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/EUCM-v02.puml)
 
-Using a combined model-driven and LLM approach, the work, currently in an early stage, aims to support (*_as a minimum_*):
-* formalization of the discussed Concept Model
-* support the HL7 Tooling
-* an automated mapping from concepts to FHIR resources 
+Using a combined model-driven and LLM approach, the work, currently in an early stage, aims to support (*as a minimum*):
+* formalization and consolidation of the discussed Concept Model
+* the HL7 Tooling
+* mapping from concepts to FHIR resources
+* and beyond ;-)
 
 An experimental mapping (generated with Claude 3.7) to the FHIR Resource and Profile is [here](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/TEST%20LLM/EUCM%20mapping%20FHIR%20Resources-05-04-2025.docx).
 

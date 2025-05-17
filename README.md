@@ -22,4 +22,4 @@ An experimental mapping (generated with Claude 3.7) to the FHIR Resource and Pro
 
 Madrid May 2025 WGM Presentation is [here](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/Presentations/Common%20Cancer%20Model%20-%20Madrid%20WGM%20Presentation.pptx) 
 
-![Cuurent Formal Common Cancer Concept model](http://url/to/img.png](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/RevisedEuropeanCancerConceptModel_in_UML-v02.jpg)
+![Curent Formal Common Cancer Concept model](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/RevisedEuropeanCancerConceptModel_in_UML-v02.jpg)

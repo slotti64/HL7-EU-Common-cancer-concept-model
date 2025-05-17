@@ -13,8 +13,8 @@ A Python program ([owl2plantuml_v17.py](https://github.com/slotti64/HL7-EU-Commo
 
 * [EUCM-v02.puml](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/EUCM-v02.puml)
 
-Using a combined model-driven and LLM approach, the work, currently in an early stage, aims to support:
-* formalization of the conceptual model and alignment
+Using a combined model-driven and LLM approach, the work, currently in an early stage, aims to support (_as a minimum_):
+* formalization of the discussed Concept Model
 * support the HL7 Tooling
 * an automated mapping from concepts to FHIR resources 
 

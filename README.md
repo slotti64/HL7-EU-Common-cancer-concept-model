@@ -14,3 +14,5 @@ A Python program ([owl2plantuml_v17.py](https://github.com/slotti64/HL7-EU-Commo
 * [EUCM-v02.puml](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/EUCM-v02.puml)
 
 The model, currently in an early stage, aims to support automated mapping from concepts to resources using a combined model-driven and LLM approach. 
+
+An experimental generate  mapping to FHIR Resource and Profile is [here](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/TEST%20LLM/EUCM%20mapping%20FHIR%20Resources-05-04-2025.docx).

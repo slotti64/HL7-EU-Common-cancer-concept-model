@@ -21,5 +21,6 @@ Using a combined model-driven and LLM approach, the work, currently in an early 
 An experimental mapping (generated with Claude 3.7) to the FHIR Resource and Profile is [here](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/TEST%20LLM/EUCM%20mapping%20FHIR%20Resources-05-04-2025.docx).
 
 Madrid May 2025 WGM Presentation is [here](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/Presentations/Common%20Cancer%20Model%20-%20Madrid%20WGM%20Presentation.pptx) 
+(This work must be aligned with the result of WGM Discussion)
 
 ![Curent Formal Common Cancer Concept model](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/RevisedEuropeanCancerConceptModel_in_UML-v02.jpg)

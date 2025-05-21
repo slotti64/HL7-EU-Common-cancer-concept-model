@@ -2,7 +2,7 @@
 ## Formal Concept Model and Glossary 
 
 The initial OWL 2 model was generated from [European Cancer Common Conceptual Model v2](https://confluence.hl7.org/download/attachments/281282385/CancerLogicalModel_20250414_Rev.png?version=1&modificationDate=1744961792994&api=v2) with Claude's LLM support. 
-The Cameo Concept Model plugin imported this OWL model into MacDraw UML 2024x, which was revised, integrated, and extended with the existing glossary.
+The Cameo Concept Model plugin imported this OWL model into MacDraw UML 2024x. The model was revised, integrated, and extended with the existing glossary before a set of artifacts was generated.
 
 ## Generated Artifacts
 

@@ -1,0 +1,2741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://HL7.eu/ontology/CommonCancerModel#"
+     xml:base="http://HL7.eu/ontology/CommonCancerModel"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://HL7.eu/ontology/CommonCancerModel">
+        <owl:versionIRI rdf:resource="urn:absolute:2.1"/>
+        <rdfs:label>HL7 Common Cancer Model</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#BaseOfAssertion -->
+
+
+    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#BaseOfAssertion">
+        <rdfs:comment>the type of procedure on the base of the Cancer Condition was detected. It could be a choice from Visit, Biopsy, Surgery, Imaging, Biomarker, Lab Report, ... </rdfs:comment>
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Biomarker</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Biopsy</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Genomics</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Imaging</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>Lab Report</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>Visit</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#DiseaseStatus -->
+
+
+    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#DiseaseStatus">
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+&lt;span style=&quot;color:black;&quot;&gt;Represents the status of the&amp;#160;&lt;em&gt;Cancer Condition &lt;/em&gt;evaluated during a &lt;em&gt;Visit&lt;/em&gt;. It could be one of the following:&amp;#160;&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li style=&quot;color:black;&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Progression: &lt;/em&gt;in case the cancer is grown respect the previous &lt;em&gt;Visit&lt;/em&gt;&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li style=&quot;color:black;&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Stable Disease:&amp;#160;&lt;/em&gt;in case the cancer is not grown or&amp;#160;shrunk respect the previous &lt;em&gt;Visit&lt;/em&gt;&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li style=&quot;color:black;&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Partial Remission:&amp;#160;&lt;/em&gt;in case the cancer shrunk respect the previous &lt;em&gt;Visit&lt;/em&gt;&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li style=&quot;color:black;&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Complete Remission: &lt;/em&gt;in case the cancer completely disappeared&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li style=&quot;color:black;&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Recurrence: &lt;/em&gt;in case the cancer after complete remission re-appeared or cancer that has recurred (come back), usually after a period of time during which the cancer &lt;strong&gt;could not be&amp;#160;detected&lt;/strong&gt;).&amp;#160;&lt;/span&gt;
+
+      &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Complete Remission</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Disease Recurrence</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Partial Remission</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Progression</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>Stable</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#EvolutionType -->
+
+
+    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#EvolutionType">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Progression</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Recurrence</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#ExtentType -->
+
+
+    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#ExtentType">
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+&lt;span style=&quot;color:black;&quot;&gt;It can be:&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Local&lt;/em&gt;: in case the&amp;#160;site is the primary site (the site of the&amp;#160;&lt;em&gt;Cancer Condition&lt;/em&gt; is the same)&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Loco-regional&lt;/em&gt;: i&lt;span&gt;n case the site is the primary site and the surrounding anatomical region (also to the regional lymph nodes but with no distant metastases)&lt;/span&gt;&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Metastatic&lt;/em&gt;: in case there are also distant metastases.&lt;/span&gt;
+
+      &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Local</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Loco-regional</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Metastatic</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Intent -->
+
+
+    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#Intent">
+        <rdfs:comment>An Intent: indicates if it is curative or not (so only to decrease the symptoms) for the cancer. It can be a choice from: Definitive and Palliative.</rdfs:comment>
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Definitive (curative)</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Palliative</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#LifeStatus -->
+
+
+    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#LifeStatus">
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+&lt;strong&gt;Life Status (and Cause)&lt;/strong&gt;&lt;em&gt;&amp;#160;&lt;/em&gt;that represent the evolving life status of the patient verified during a &lt;em&gt;Visit, &lt;/em&gt;&lt;u&gt;after the first treatment&lt;/u&gt;, to indicate if it is alive (with disease or not) or dead (with information on it). &lt;span&gt;It can evolve during the time. It could be one of the following:&amp;#160;&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li data-uuid=&quot;8065c29c-71d9-4d21-a159-a24e6cbf6e1b&quot;&gt;
+&lt;span&gt;&lt;em&gt;Alive, No Evidence of Disease (NED)&lt;/em&gt;: in case it is alive and there are no evidence of the disease presence anymore&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;c3b87f80-fffd-44bd-b52f-39a64429950f&quot;&gt;
+&lt;span&gt;&lt;em&gt;Dead of Disease (DOD)&lt;/em&gt;: in case it is dead with cancer as sure reason&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;b83789d3-805c-41d5-af77-180e4df33856&quot;&gt;
+&lt;span&gt;&lt;em&gt;Dead of Other Cause (DOC)&lt;/em&gt;: in case it is dead, but the reason is not cancer for sure&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;4819a46a-b4b5-4ad7-b9bc-d8eed79d7ac6&quot;&gt;
+&lt;em&gt;Dead of Unknow Cause (DUC)&lt;/em&gt;: &lt;span&gt;in case it is dead, but the reason is unknow (it could be or not cancer)&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;a525ee59-dc19-4a87-8876-ef326ac71576&quot;&gt;
+&lt;span&gt;&lt;em&gt;Alive With Disease (AWD)&lt;/em&gt;: in case it is alive and the cancer it is still present.&lt;/span&gt;
+
+      &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Alive No Evidence of Disease (NED)</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Alive with Disease (AWD)</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Dead of Disease (DOD)</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Dead of Other Cause (DOC)</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>Dead of Unknown Cause (DUC)</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#TreatmentResponseType -->
+
+
+    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#TreatmentResponseType">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Complete Remission</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Partial Remission</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Progression</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Stable Disease</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#TriggerEvent -->
+
+
+    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#TriggerEvent">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>screening</rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#basedOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#basedOn">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#Evidence"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#Evidence"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>based on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#basedOnOneOrMoreProcedure -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#basedOnOneOrMoreProcedure">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <rdfs:label>based on one or more procedure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#basedOnOneOrMoreVisit -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#basedOnOneOrMoreVisit">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Visit"/>
+        <rdfs:label>based on one or more visit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canBeOneOrASetOfSingleTreatmentsOrACombinationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canBeOneOrASetOfSingleTreatmentsOrACombinationOf">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Treatment"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#ActiveSurveillance"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#DrugAdministration"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#Surgery"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>can be one or a set of single treatments or a combination of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canBePrescribedThrough -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canBePrescribedThrough">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#DrugAdministration"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#Prescription"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#TreatmentPlan"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>can be prescribed through</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canBeTheSameOfEvidence -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canBeTheSameOfEvidence">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#AssertedDate"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Evidence"/>
+        <rdfs:label>can be the same of evidence</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canBeTheSameOfVisit -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canBeTheSameOfVisit">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#AssertedDate"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Visit"/>
+        <rdfs:label>can be the same of visit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canEvolveThroughDiseaseOverTimeAndSpace -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canEvolveThroughDiseaseOverTimeAndSpace">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"/>
+        <rdfs:label>can evolve through disease over time and space</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canHaveABiomarkerType -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canHaveABiomarkerType">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#BiomarkerType"/>
+        <rdfs:label>can have a biomarker type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canHaveADiseaseExtent -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canHaveADiseaseExtent">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"/>
+        <rdfs:label>can have a disease extent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canHaveAGenomics -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canHaveAGenomics">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Genomics"/>
+        <rdfs:label>can have a genomics</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canHaveATumorGrade -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canHaveATumorGrade">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TumorGrade"/>
+        <rdfs:label>can have a tumor grade</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canHaveAnImagingType -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canHaveAnImagingType">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#ImagingType"/>
+        <rdfs:label>can have an imaging type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canHaveComorbidities -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canHaveComorbidities">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Patient"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Comorbidities"/>
+        <rdfs:label>can have comorbidities</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMore -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMore">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Treatment"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse"/>
+        <rdfs:label>can have one or more</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMoreLoco-regionalSite -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMoreLoco-regionalSite">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Loco-regionalSite"/>
+        <rdfs:label>can have one or more loco-regional site</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMoreMetastaticSite -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMoreMetastaticSite">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#MetastaticSite"/>
+        <rdfs:label>can have one or more metastatic site</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#canPartecipateToClinicalTrials -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#canPartecipateToClinicalTrials">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Patient"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#ClinicalTrials"/>
+        <rdfs:label>can partecipate to clinical trials</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#choiceFromProcedureDate -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#choiceFromProcedureDate">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#AssertedDate"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <rdfs:label>choice from procedure date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#definedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#definedBy">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#PathologicalStage"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Surgery"/>
+        <rdfs:label>defined by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#definedByBiopsy -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#definedByBiopsy">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#HistologyBehaviour"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#TumorGrade"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Biopsy"/>
+        <rdfs:label>defined by biopsy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#definedBySurgery -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#definedBySurgery">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#HistologyBehaviour"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Surgery"/>
+        <rdfs:label>defined by surgery</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#definedThrough -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#definedThrough">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#ClinicalStage"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <rdfs:label>defined through</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#definedThroughEvidence -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#definedThroughEvidence">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Genomics"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Evidence"/>
+        <rdfs:label>defined through evidence</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#definedThroughImaging -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#definedThroughImaging">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Imaging"/>
+        <rdfs:label>defined through imaging</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#definedThrougtImaging -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#definedThrougtImaging">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#BodySite"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Imaging"/>
+        <rdfs:label>defined througt imaging</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#dependingOnEvidence -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#dependingOnEvidence">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#BiomarkerType"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#ImagingType"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Evidence"/>
+        <rdfs:label>depending on evidence</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#dependingOnProcedure -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#dependingOnProcedure">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#BiomarkerType"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#ImagingType"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <rdfs:label>depending on procedure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#documentedInAReport -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#documentedInAReport">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Report"/>
+        <rdfs:label>documented in a report</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#evaluatedDuringAVisit -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#evaluatedDuringAVisit">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Visit"/>
+        <rdfs:label>evaluated during a visit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasALastCheck -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasALastCheck">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Patient"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#LastCheck"/>
+        <rdfs:label>has a last check</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasATargetSite -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasATargetSite">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TargetSite"/>
+        <rdfs:label>has a target site</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasATumorGrade -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasATumorGrade">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TumorGrade"/>
+        <rdfs:label>has a tumor Grade</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasAnAssertedDate -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasAnAssertedDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#AssertedDate"/>
+        <rdfs:label>has an asserted date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasCancerCondition -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasCancerCondition">
+        <owl:inverseOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#isAffectedByPatient"/>
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Patient"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+        <rdfs:label>has cancer condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasCancerStage -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasCancerStage">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerStage"/>
+        <rdfs:label>has cancer stage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasEvolvingDemographics -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasEvolvingDemographics">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Patient"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Demographics"/>
+        <rdfs:label>has evolving demographics</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasOneOrMoreVisit -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasOneOrMoreVisit">
+        <owl:inverseOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#performedOnAPatient"/>
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Patient"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Visit"/>
+        <rdfs:label>has one or more visit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasReport -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasReport">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Surgery"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Report"/>
+        <rdfs:label>has report</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasTargetSite -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasTargetSite">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Surgery"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TargetSite"/>
+        <rdfs:label>has target site</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#isAffectedByPatient -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#isAffectedByPatient">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Patient"/>
+        <rdfs:label>is affected by patient</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#isAnOngoing -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#isAnOngoing">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DrugAdministration"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Immunotherapy"/>
+        <rdfs:label>is an ongoing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#isDefinedByBodySite -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#isDefinedByBodySite">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#BodySite"/>
+        <rdfs:label>is defined by body site</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#isDefinedByHistologyBehaviour -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#isDefinedByHistologyBehaviour">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#HistologyBehaviour"/>
+        <rdfs:label>is defined by histology behaviour</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#isEvaluatedDuringA -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#isEvaluatedDuringA">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Evidence"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Visit"/>
+        <rdfs:label>is evaluated during a</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#isRelatedToACancerCondition -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#isRelatedToACancerCondition">
+        <owl:inverseOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#basedOnOneOrMoreProcedure"/>
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+        <rdfs:label>is related to a cancer condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#isTheTargetOfOneOrMoreTreatment -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#isTheTargetOfOneOrMoreTreatment">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Treatment"/>
+        <rdfs:label>is the target of one or more treatment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#isUnderOneOrMoreTreatment -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#isUnderOneOrMoreTreatment">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Patient"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Treatment"/>
+        <rdfs:label>is under one or more treatment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#mustBeUpdatedDuringAVisit -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#mustBeUpdatedDuringAVisit">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#LastCheck"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Visit"/>
+        <rdfs:label>must be updated during a visit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#performedOnAPatient -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#performedOnAPatient">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Visit"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Patient"/>
+        <rdfs:label>performed on a patient</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#relatedToACancerCondition -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#relatedToACancerCondition">
+        <owl:inverseOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canEvolveThroughDiseaseOverTimeAndSpace"/>
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+        <rdfs:label>related to a cancer condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#relatedToATreatment -->
+
+
+    <owl:ObjectProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#relatedToATreatment">
+        <owl:inverseOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMore"/>
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Treatment"/>
+        <rdfs:label>related to a treatment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#causedByTriggerEvent -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#causedByTriggerEvent">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TriggerEvent"/>
+        <rdfs:label>caused by trigger event</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#code -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#code">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Encounter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#date -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#date">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#AssertedDate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label>date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#definedThroughBaseOfAssertion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#definedThroughBaseOfAssertion">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#CancerCondition"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#BaseOfAssertion"/>
+        <rdfs:label>defined through base of assertion</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#endDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#endDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#ActiveSurveillance"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#DrugAdministration"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label>end date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasADiseaseStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasADiseaseStatus">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseStatus"/>
+        <rdfs:label>has a disease status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasATreatmentResponseType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasATreatmentResponseType">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TreatmentResponseType"/>
+        <rdfs:label></rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasAnEvolutionType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasAnEvolutionType">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#EvolutionType"/>
+        <rdfs:label></rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasAnEvolvingLifeStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasAnEvolvingLifeStatus">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Patient"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#LifeStatus"/>
+        <rdfs:label>has an evolving life status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasAnIntent -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasAnIntent">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Treatment"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Intent"/>
+        <rdfs:label>has an intent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#LastCheck"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label>has date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#hasOneOrMoreExtentType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#hasOneOrMoreExtentType">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"/>
+        <rdfs:range rdf:resource="http://HL7.eu/ontology/CommonCancerModel#ExtentType"/>
+        <rdfs:label>has one or more extent type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#site -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#site">
+        <rdfs:domain rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>site</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#startDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://HL7.eu/ontology/CommonCancerModel#startDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#ActiveSurveillance"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#DrugAdministration"/>
+                    <rdf:Description rdf:about="http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label>start date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#ActiveSurveillance -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#ActiveSurveillance">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#startDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#endDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DrugAdministration"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Surgery"/>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+It is characterized by a &lt;b&gt;Start Date&lt;/b&gt; and an &lt;b&gt;End Date&lt;/b&gt;.&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Active Surveillance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Anti-cancerTreatment -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Anti-cancerTreatment">
+        <owl:equivalentClass rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Treatment"/>
+        <rdfs:label>Anti-cancer treatment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#AssertedDate -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#AssertedDate">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#choiceFromProcedureDate"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canBeTheSameOfEvidence"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canBeTheSameOfVisit"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+&lt;span&gt;Represents the first data when the presence of the&amp;#160;&lt;/span&gt;&lt;em&gt;&lt;span&gt;Cancer Condition &lt;/span&gt;&lt;/em&gt;&lt;span&gt;was detected. It depends on the data source availability and on the cancer type, so it is not possible to define a common date to consider as diagnosis date. The common aspect is that it &lt;/span&gt;&lt;span&gt;must &lt;/span&gt;&lt;span&gt;correspond to one documented report (e.g. &lt;em&gt;Visit, Biopsy, Surgery, Imaging, Biomarker, Lab Report, Genomics&lt;/em&gt;)&lt;/span&gt;&lt;span style=&quot;color:black;&quot;&gt;&lt;span&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Asserted Date</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Biomarker -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Biomarker">
+        <rdfs:subClassOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Evidence"/>
+        <rdfs:subClassOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Biopsy"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Genomics"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Imaging"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Laboratory"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Surgery"/>
+        <rdfs:label>Biomarker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#BiomarkerType -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#BiomarkerType">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#dependingOnEvidence"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#dependingOnProcedure"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+&lt;span style=&quot;color:black;&quot;&gt;Represents the type of biomarker on the base of the&amp;#160;&lt;em&gt;Cancer Condition&lt;/em&gt;&lt;/span&gt;&lt;span style=&quot;color:black;&quot;&gt;&lt;span&gt; was detected.&amp;#160;&lt;/span&gt;&lt;/span&gt;&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Biomarker Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Biopsy -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Biopsy">
+        <rdfs:subClassOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Genomics"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Imaging"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Laboratory"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Surgery"/>
+        <rdfs:label>Biopsy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#BodySite -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#BodySite">
+        <owl:equivalentClass rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Location"/>
+        <owl:equivalentClass rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Topography"/>
+        <owl:equivalentClass rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TumorSide"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#definedThrougtImaging"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+Represents the first location where Cancer Condition was detected (typically with an Imaging).&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Body Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#CancerCondition -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#CancerCondition">
+        <owl:equivalentClass rdf:resource="http://HL7.eu/ontology/CommonCancerModel#PrimaryCancer"/>
+        <owl:equivalentClass rdf:resource="http://HL7.eu/ontology/CommonCancerModel#SecondaryPrimaryCondition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#basedOnOneOrMoreProcedure"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#basedOnOneOrMoreVisit"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canEvolveThroughDiseaseOverTimeAndSpace"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasCancerStage"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#isAffectedByPatient"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#isTheTargetOfOneOrMoreTreatment"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#definedByBiopsy"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasATumorGrade"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasAnAssertedDate"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canHaveABiomarkerType"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canHaveAnImagingType"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#definedThroughBaseOfAssertion"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://HL7.eu/ontology/CommonCancerModel#BaseOfAssertion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+&lt;span&gt;Represents the diagnosed cancer and the start of the cancer journey, so the start of the &lt;/span&gt;&lt;em&gt;&lt;span&gt;Cancer Condition (First diagnosis)&lt;/span&gt;&lt;/em&gt;&lt;span&gt;. It must have&amp;#160;&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li data-uuid=&quot;379f04a8-9eaf-4962-ae0c-40e152b01b71&quot;&gt;
+&lt;span&gt;an &lt;/span&gt;&lt;strong&gt;Histology Behaviour&lt;/strong&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;60e84af7-c098-4567-94cd-723119e19a75&quot;&gt;
+&lt;span&gt;a&lt;/span&gt;&lt;strong&gt; Body Site&lt;/strong&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;cd1e2386-a86f-4963-a857-86590c4ddda8&quot;&gt;
+&lt;span&gt;a &lt;strong&gt;Tumour Grade&lt;/strong&gt;&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;fd968eb2-3dc8-4cd0-a3fa-f1fca8a024ca&quot;&gt;
+&lt;span&gt;an &lt;/span&gt;&lt;strong&gt;Asserted Date&lt;/strong&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;81b90e10-43e5-4469-971b-4536895bfcbd&quot;&gt;
+&lt;span&gt;a &lt;/span&gt;&lt;strong&gt;Base of Diagnosis&lt;/strong&gt;
+
+      &lt;/li&gt;
+      &lt;li&gt;
+&lt;span&gt;a &lt;/span&gt;&lt;strong&gt;Disease Status&lt;/strong&gt;
+
+      &lt;/li&gt;
+      &lt;li&gt;
+&lt;span&gt;&lt;strong&gt;Last Check&lt;/strong&gt;&lt;/span&gt;
+
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;
+&lt;span&gt;It can have:&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li data-uuid=&quot;1cfc0d9d-ffaa-44c0-956f-4998a12e243c&quot;&gt;
+&lt;span&gt;a &lt;/span&gt;&lt;strong&gt;Imaging Type&lt;/strong&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;63f4efba-63f3-4e29-aa58-40eff428ad2a&quot;&gt;
+&lt;span&gt;a &lt;/span&gt;&lt;strong&gt;Biomarker Type&lt;/strong&gt;
+
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;
+&lt;b&gt;Note:&lt;/b&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;Each time a patient has a new cancer (so not related and independent from the first one), they have a new&amp;#160;&lt;em&gt;Cancer Condition&lt;/em&gt;. In case in time, there is an updated of the &lt;em&gt;Cancer Condition &lt;/em&gt;(releted to the same cell type, so depending on the first cancer), it will be reflected in a new &lt;span&gt;&lt;em&gt;Disease over time and space &lt;/em&gt;instance.&amp;#160;&lt;/span&gt;&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;If a cancer is metastatic at the&amp;#160;&lt;em&gt;First diagnosis&lt;/em&gt;, the information on the metastasis is collected within the&amp;#160;&lt;em&gt;Cancer Stage&lt;/em&gt; not in the&lt;em&gt; &lt;span&gt;Disease over time and space instance&lt;/span&gt;.&lt;/em&gt;&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;The couple &lt;/span&gt;&lt;strong&gt;Histology Behaviour&lt;/strong&gt;&lt;span&gt; and &lt;/span&gt;&lt;strong&gt;Body Site&lt;/strong&gt;&lt;span&gt; identifies the &lt;/span&gt;&lt;em&gt;&lt;span&gt;Cancer Condition.&lt;/span&gt;&lt;/em&gt;
+
+    &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Cancer Condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#CancerStage -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#CancerStage">
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+&lt;span&gt;Represents the stage of the &lt;/span&gt;&lt;em&gt;&lt;span&gt;Cancer Condition &lt;/span&gt;&lt;/em&gt;at the &lt;em&gt;First Diagnosis&lt;/em&gt; and describes the tumour extent &lt;u&gt;at the time of the first definitive treatment&lt;/u&gt;&lt;span&gt;. &lt;/span&gt;&lt;span style=&quot;color:black;&quot;&gt;&lt;span&gt;&lt;u&gt;It never evolves&lt;/u&gt; during the cancer journey. &lt;/span&gt;&lt;/span&gt;&lt;span&gt;The stage can be &lt;/span&gt;&lt;em&gt;&lt;span&gt;Clinical &lt;/span&gt;&lt;/em&gt;&lt;span&gt;(is based on &lt;/span&gt;&lt;em&gt;&lt;span&gt;Imaging&lt;/span&gt;&lt;/em&gt;&lt;span&gt;) or &lt;/span&gt;&lt;em&gt;&lt;span&gt;Pathological &lt;/span&gt;&lt;/em&gt;&lt;span&gt;(is based in &lt;/span&gt;&lt;em&gt;&lt;span&gt;Surgery&lt;/span&gt;&lt;/em&gt;&lt;span&gt;).&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;&amp;#160;&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;In case in time, there is an extension of the &lt;em&gt;Cancer Condition&lt;/em&gt; (releted to the same cell type, so depending on the first cancer), it &lt;/span&gt;&lt;span&gt;will be reflected in a new &lt;span&gt;&lt;em&gt;Disease over time and space &lt;/em&gt;instance with&lt;/span&gt;&amp;#160;&lt;/span&gt;&lt;em&gt;&lt;span&gt;Disease Status&lt;/span&gt;&lt;/em&gt;&lt;span&gt; (as &lt;/span&gt;&lt;em&gt;&lt;span&gt;Progression or Recurrence&lt;/span&gt;&lt;/em&gt;&lt;span&gt;), while the &lt;em&gt;Cancer Stage&lt;/em&gt; will not change.&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;If a cancer is metastatic at the &lt;em&gt;First diagnosis&lt;/em&gt;, the information on the metastasis is collected within the&amp;#160;&lt;em&gt;Cancer Stage&lt;/em&gt; not in the&lt;em&gt; Disease over time and space &lt;/em&gt;instance&lt;em&gt;).&lt;/em&gt;&lt;/span&gt;
+
+    &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Cancer Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#ClinicalStage -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#ClinicalStage">
+        <rdfs:subClassOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#definedThrough"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#PathologicalStage"/>
+        <rdfs:label>Clinical Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#ClinicalTrials -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#ClinicalTrials">
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+&lt;span&gt;A patient can participate in trials and represent its purposes and objectives.&lt;/span&gt;&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Clinical Trials</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Comorbidities -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Comorbidities">
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+&lt;span&gt;Represent the possible other relevant diseases that affect them. It can evolve during the time.&lt;/span&gt;&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Comorbidities</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Demographics -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Demographics">
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+&lt;span&gt;Represents demographic information (e.g. the sex, birth date (or only year)). It can evolve during the time.&lt;/span&gt;&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Demographics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMoreLoco-regionalSite"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMoreMetastaticSite"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#definedThroughImaging"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#isTheTargetOfOneOrMoreTreatment"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasOneOrMoreExtentType"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://HL7.eu/ontology/CommonCancerModel#ExtentType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+&lt;span style=&quot;color:black;&quot;&gt;r&lt;/span&gt;epresent the location where the cancer is extended at the time of the assertion (typically evaluated with an &lt;em style=&quot;letter-spacing:0.0px;color:black;&quot;&gt;&lt;span style=&quot;letter-spacing:0.0px; color:black;;letter-spacing:0.0px;&quot;&gt;Imaging&lt;/span&gt;&lt;/em&gt;&lt;span style=&quot;color:black;;letter-spacing:0.0px;&quot;&gt;). It has&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li data-uuid=&quot;633dbd01-7bcf-4bcf-9131-c493d4de20ca&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;one or more &lt;em&gt;Extent type &lt;/em&gt;that can be:&lt;/span&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Local&lt;/em&gt;: in case the&amp;#160;site is the primary site (the site of the&amp;#160;&lt;em&gt;Cancer Condition&lt;/em&gt; is the same)&lt;/span&gt;
+
+          &lt;/li&gt;
+          &lt;li&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Loco-regional&lt;/em&gt;: i&lt;span&gt;n case the site is the primary site and the surrounding anatomical region (also to the regional lymph nodes but with no distant metastases)&lt;/span&gt;&lt;/span&gt;
+
+          &lt;/li&gt;
+          &lt;li&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Metastatic&lt;/em&gt;: in case there are also distant metastases.&lt;/span&gt;
+
+          &lt;/li&gt;
+        &lt;/ul&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;30d97dd8-2962-42ff-9eca-81d41442dbd9&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;can have one or more:&lt;/span&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Loco-regional site&lt;/em&gt;: the specific site of the surrounding anatomical region involved&amp;#160;&lt;/span&gt;
+
+          &lt;/li&gt;
+          &lt;li&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Metastatic site&lt;/em&gt;: the specific site of the metastases.&lt;/span&gt;
+
+          &lt;/li&gt;
+        &lt;/ul&gt;
+
+      &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Disease Extent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#isTheTargetOfOneOrMoreTreatment"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasAnAssertedDate"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#relatedToACancerCondition"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canHaveABiomarkerType"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canHaveADiseaseExtent"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canHaveAGenomics"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canHaveATumorGrade"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canHaveAnImagingType"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasADiseaseStatus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://HL7.eu/ontology/CommonCancerModel#DiseaseStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasAnEvolutionType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://HL7.eu/ontology/CommonCancerModel#EvolutionType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+&lt;span&gt;Represents the evolution over the time and over the space of the &lt;em&gt;Cancer Condition. &lt;/em&gt;Every time that there is a new evaluation, there will be a new instance of&lt;em&gt; Disease over time and space &lt;/em&gt;that&lt;/span&gt;&lt;span style=&quot;letter-spacing:0.0px;&quot;&gt;&amp;#160;&lt;strong&gt;must &lt;/strong&gt;have:&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li data-uuid=&quot;fc4b3f83-987d-4833-b7e7-1334a3009278&quot; style=&quot;color:black;&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;a &lt;strong&gt;Disease Status&lt;/strong&gt;&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;79a7cfe0-2c6d-4d8f-b50d-f484fe04c070&quot;&gt;
+an &lt;strong&gt;Asserted Date&lt;/strong&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;89aacef4-88a2-4be2-8101-fb9b558b7642&quot;&gt;
+a &lt;strong&gt;Base of Assertion&lt;/strong&gt;:
+
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;
+and it &lt;strong&gt;can &lt;/strong&gt;have:
+
+    &lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li style=&quot;color:black;&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;strong&gt;Disease Extent: &lt;/strong&gt;&lt;/span&gt;&lt;span style=&quot;color:black;;letter-spacing:0.0px;&quot;&gt;It has&lt;/span&gt;
+        &lt;ul&gt;
+          &lt;li data-uuid=&quot;633dbd01-7bcf-4bcf-9131-c493d4de20ca&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;one or more &lt;em&gt;Extent type &lt;/em&gt;&lt;/span&gt;&lt;span style=&quot;color:black;&quot;&gt;that &lt;/span&gt;&lt;span style=&quot;color:black;&quot;&gt;can have one or more:&lt;/span&gt;
+            &lt;ul&gt;
+              &lt;li&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Loco-regional site&lt;/em&gt;&lt;/span&gt;
+
+              &lt;/li&gt;
+              &lt;li&gt;
+&lt;span style=&quot;color:black;&quot;&gt;&lt;em&gt;Metastatic site&lt;/em&gt;&lt;/span&gt;
+
+              &lt;/li&gt;
+            &lt;/ul&gt;
+
+          &lt;/li&gt;
+        &lt;/ul&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;2cf5ab99-8eb3-4782-bf5b-059cc0b5f203&quot; style=&quot;color:black;&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;a &lt;strong&gt;Tumour Grade&lt;/strong&gt;&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;28a187ea-32b9-41fa-830f-e9b7679efb43&quot; style=&quot;color:black;&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;a&amp;#160;&lt;strong&gt;Imaging Type&lt;/strong&gt;&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;730da9f5-36b6-4948-b7ff-962ec2f353ad&quot; style=&quot;color:black;&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;a &lt;strong&gt;Biomarker Type&lt;/strong&gt;&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;91d132ff-a787-4bd0-a1b4-c81968a4151e&quot; style=&quot;color:black;&quot;&gt;
+&lt;span style=&quot;color:black;&quot;&gt;a &lt;strong&gt;Genomics&lt;/strong&gt;&lt;/span&gt;
+
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;
+&lt;b&gt;Note:&lt;/b&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span style=&quot;color:black;&quot;&gt;After the First Diagnosis, every time that there is an evaluation of the Cancer Codition during a &lt;em&gt;Visit&lt;/em&gt;,&amp;#160;a new instance of &lt;em&gt;Disease Evolution &lt;/em&gt;is created.&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span style=&quot;color:black;&quot;&gt;If a cancer is metastatic at the&amp;#160;&lt;em&gt;First diagnosis&lt;/em&gt;, the information on the metastasis is collected within the &lt;em&gt;Cancer Stage&lt;/em&gt; not in the&lt;em&gt; Disease Evolution over time and space.&lt;/em&gt;&lt;/span&gt;
+
+    &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Disease over time and space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#DrugAdministration -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#DrugAdministration">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#isAnOngoing"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#startDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#endDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Surgery"/>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+&lt;span&gt;It is characterized by a &lt;/span&gt;&lt;strong&gt;Start Date,&lt;/strong&gt;&lt;span&gt; an&lt;/span&gt;&lt;strong&gt; End Date &lt;/strong&gt;&lt;span&gt;and a possible indication if the therapy is &lt;/span&gt;&lt;strong&gt;Ongoing &lt;/strong&gt;&lt;span&gt;(in case of Immunotherapy).&lt;/span&gt;&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Drug Administration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Encounter -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Encounter">
+        <owl:equivalentClass rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Visit"/>
+        <rdfs:label>Encounter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Evidence -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Evidence">
+        <rdfs:label>Evidence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Genomics -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Genomics">
+        <rdfs:subClassOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Evidence"/>
+        <rdfs:subClassOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#definedThroughEvidence"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Imaging"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Laboratory"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Surgery"/>
+        <rdfs:label>Genomics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#HistologyBehaviour -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#HistologyBehaviour">
+        <owl:equivalentClass rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Morphology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#definedByBiopsy"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#definedBySurgery"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Histology describes the cell type of the neoplasm and the behaviour describes whether a tumour is malignant or benign, whether it is a carcinoma in situ or a neoplasm of uncertain malignancy. Typicallycally it is defined with Surgery and Biopsy). </rdfs:comment>
+        <rdfs:label>Histology Behaviour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Imaging -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Imaging">
+        <rdfs:subClassOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Evidence"/>
+        <rdfs:subClassOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Laboratory"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Surgery"/>
+        <rdfs:label>Imaging</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#ImagingType -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#ImagingType">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#dependingOnEvidence"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#dependingOnProcedure"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+&lt;span&gt;Represents the type of image on the base of the Cancer Condition was detected&lt;/span&gt;&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Imaging Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Immunotherapy -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Immunotherapy">
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+A type of therapy that uses substances to stimulate or suppress the immune system to help the body fight cancer, infection, and other diseases.&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Immunotherapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Laboratory -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Laboratory">
+        <rdfs:subClassOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Evidence"/>
+        <rdfs:subClassOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"/>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Surgery"/>
+        <rdfs:label>Laboratory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#LastCheck -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#LastCheck">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#mustBeUpdatedDuringAVisit"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+&lt;span&gt;Represent the date of the &lt;em&gt;Visit &lt;/em&gt;in which the&lt;em&gt; Cancer Condition&lt;/em&gt; has been evaluated.&lt;/span&gt;
+
+    &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Last Check</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Location -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Location">
+        <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Loco-regionalSite -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Loco-regionalSite">
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+The specific site of the surrounding anatomical region involved&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Loco-regional Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#MetastaticSite -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#MetastaticSite">
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+&lt;span style=&quot;color:black;&quot;&gt;The specific site of the metastases.&lt;/span&gt;&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Metastatic Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Morphology -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Morphology">
+        <rdfs:label>Morphology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#PathologicalStage -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#PathologicalStage">
+        <rdfs:subClassOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#CancerStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#definedBy"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Pathological Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Patient -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Patient">
+        <owl:equivalentClass rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Subject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canHaveComorbidities"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasCancerCondition"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasOneOrMoreVisit"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#isUnderOneOrMoreTreatment"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasALastCheck"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasEvolvingDemographics"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasAnEvolvingLifeStatus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://HL7.eu/ontology/CommonCancerModel#LifeStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+&lt;span&gt;Represents the subject that is affected by one or more &lt;/span&gt;&lt;em&gt;&lt;span&gt;Cancer Conditions&lt;/span&gt;&lt;/em&gt;&lt;span&gt;. It has:&amp;#160;&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li data-uuid=&quot;6ff77ae1-b454-4c82-9527-00b35041611b&quot;&gt;
+&lt;strong&gt;Demographics&lt;/strong&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;38e01979-a40f-4a47-a900-728f87322b0d&quot;&gt;
+&lt;strong&gt;Life Status (and Cause)&lt;/strong&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;38e01979-a40f-4a47-a900-728f87322b0d&quot;&gt;
+&lt;span&gt;&lt;strong&gt;Last Check&lt;/strong&gt; &lt;/span&gt;
+
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;
+&lt;span&gt;It can have:&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li data-uuid=&quot;36585d23-981d-4987-9962-6fdc00fa3b86&quot;&gt;
+&lt;span&gt;one or more&amp;#160;&lt;/span&gt;&lt;strong&gt;Comorbidities&lt;/strong&gt;
+
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;
+&lt;b&gt;Note:       
+&lt;/b&gt;&lt;br&gt;&lt;em&gt;&lt;span&gt;Life Status (and Cause), Demographics&amp;#160;&lt;/span&gt;&lt;/em&gt;&lt;span&gt;and &lt;/span&gt;&lt;em&gt;&lt;span&gt;Comorbidity &lt;/span&gt;&lt;/em&gt;&lt;span&gt;can evolve during the journey.&amp;#160;&lt;/span&gt;
+
+    &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Patient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Prescription -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Prescription">
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TreatmentPlan"/>
+        <rdfs:label>Prescription</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#PrimaryCancer -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#PrimaryCancer">
+        <rdfs:label>Primary Cancer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Procedure -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Procedure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#documentedInAReport"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#isRelatedToACancerCondition"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#causedByTriggerEvent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TriggerEvent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Procedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Radiotherapy -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Radiotherapy">
+        <rdfs:subClassOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasATargetSite"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#startDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#endDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Surgery"/>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+It is characterized by a &lt;b&gt;Start Date,&lt;/b&gt; an &lt;b&gt;End Date&lt;/b&gt; and a &lt;b&gt;Target Site&lt;/b&gt;.&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Radiotherapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Report -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Report">
+        <rdfs:label>Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#SecondaryPrimaryCondition -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#SecondaryPrimaryCondition">
+        <rdfs:label>Secondary Primary Condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Subject -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Subject">
+        <rdfs:label>Subject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Surgery -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Surgery">
+        <rdfs:subClassOf rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Procedure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasReport"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>It is characterized by a Date and a Target Site.</rdfs:comment>
+        <rdfs:label>Surgery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#TargetSite -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#TargetSite">
+        <rdfs:label>Target Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Topography -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Topography">
+        <rdfs:label>Topography</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Treatment -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Treatment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canBeOneOrASetOfSingleTreatmentsOrACombinationOf"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMore"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasAnIntent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://HL7.eu/ontology/CommonCancerModel#Intent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+&lt;span&gt;Represents the single or combination of procedures and therapy defined to treat a &lt;/span&gt;&lt;em&gt;&lt;span&gt;Cancer Condition or a &lt;/span&gt;&lt;span style=&quot;color:black;&quot;&gt;&lt;span&gt;Disease Extent&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;&lt;span&gt;.&lt;/span&gt;&lt;b&gt;Note:&lt;/b&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;Also Diet or Exercise can be prescribed &lt;/span&gt;&lt;em&gt;&lt;span&gt;Treatments &lt;/span&gt;&lt;/em&gt;&lt;span&gt;but are not considered for the first period.&amp;#160;&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;A single &lt;/span&gt;&lt;em&gt;&lt;span&gt;Treatment &lt;/span&gt;&lt;/em&gt;&lt;span&gt;can evolve during the time.&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;&amp;#160;&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;Tipically it is very difficult to define if the target is the &lt;em&gt;Cancer Condition&lt;/em&gt; or to a specific &lt;em&gt;Diasease Extent&lt;/em&gt;.&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;Also Diet or Exercise can be prescribed&amp;#160;&lt;/span&gt;&lt;em&gt;&lt;span&gt;Treatments &lt;/span&gt;&lt;/em&gt;&lt;span&gt;but are not considered for the first period.&amp;#160;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;
+
+    &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Treatment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#TreatmentPlan -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#TreatmentPlan">
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+&lt;span&gt;It could be useful to record not only the actual treatment, but also what was planned. In fact, the &lt;/span&gt;&lt;em&gt;&lt;span&gt;Treatment &lt;/span&gt;&lt;/em&gt;&lt;span&gt;can change based on the &lt;/span&gt;&lt;em&gt;&lt;span&gt;Treatment &lt;/span&gt;&lt;/em&gt;&lt;span&gt;Response. It could be also useful to consider guidelines and if a patient has agreed or not.&lt;/span&gt;
+
+    &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Treatment Plan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#basedOn"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#evaluatedDuringAVisit"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#relatedToATreatment"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#hasATreatmentResponseType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://HL7.eu/ontology/CommonCancerModel#TreatmentResponseType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+&lt;span&gt;Represents the standard way to measure how well a cancer patient responds to a single &lt;em&gt;Treatment&lt;/em&gt;. It is based on whether tumours shrink, stay the same, or get bigger.&amp;#160;&lt;/span&gt;&lt;span style=&quot;color:black;&quot;&gt;&lt;span&gt;&lt;span&gt;It i&lt;/span&gt;&lt;/span&gt;&lt;span&gt;s evaluated by cli&lt;/span&gt;&lt;/span&gt;&lt;span&gt;nician during a&amp;#160;&lt;/span&gt;&lt;em&gt;&lt;span&gt;Visit &lt;/span&gt;&lt;/em&gt;&lt;span&gt;based on an &lt;/span&gt;&lt;em&gt;&lt;span&gt;Evidence&lt;/span&gt;&lt;/em&gt;&lt;span&gt;. It can be one of the following:&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li data-uuid=&quot;46f92cde-2d84-4b36-b0c5-28514261826b&quot;&gt;
+&lt;em&gt;&lt;span&gt;Progression&lt;/span&gt;&lt;/em&gt;&lt;span&gt; (in case the cancer is grown respect the previous &lt;/span&gt;&lt;em&gt;&lt;span&gt;Visit&lt;/span&gt;&lt;/em&gt;&lt;span&gt;)&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;4ca02e14-9620-4a80-8af9-5e5ca06ae281&quot;&gt;
+&lt;em&gt;&lt;span&gt;Stable Disease&lt;/span&gt;&lt;/em&gt;&lt;span&gt; (in case the cancer is not changed respect the previous &lt;/span&gt;&lt;em&gt;&lt;span&gt;Visit&lt;/span&gt;&lt;/em&gt;&lt;span&gt;)&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;6582ab26-40b1-4a96-b4de-5d2b14c8e410&quot;&gt;
+&lt;em&gt;&lt;span&gt;Partial Remission &lt;/span&gt;&lt;/em&gt;&lt;span&gt;(in case the cancer shrunk respect the previous &lt;/span&gt;&lt;em&gt;&lt;span&gt;Visit&lt;/span&gt;&lt;/em&gt;&lt;span&gt;)&lt;/span&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;9ce790bf-ca0d-4a0a-8351-f53f5e105c43&quot;&gt;
+&lt;span&gt;&lt;em&gt;Complete &lt;/em&gt;Remission (in case the cancer completely disappeared).&lt;/span&gt;
+
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;
+&lt;span&gt;It must have:&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li data-uuid=&quot;103aecff-236c-4c3b-a321-4c85cde67171&quot;&gt;
+&lt;span&gt;a &lt;/span&gt;&lt;strong&gt;Based on&lt;/strong&gt;&lt;span&gt;:&amp;#160; the type of &lt;/span&gt;&lt;em&gt;&lt;span&gt;Evidence &lt;/span&gt;&lt;/em&gt;&lt;span&gt;on the base of the response is evaluated during the &lt;/span&gt;&lt;em&gt;&lt;span&gt;Visit&lt;/span&gt;&lt;/em&gt;&lt;span&gt;. It could be a choice from &lt;/span&gt;&lt;em&gt;&lt;span&gt;Imaging, Lab Report, Biomarker, ...&lt;/span&gt;&lt;/em&gt;
+
+      &lt;/li&gt;
+      &lt;li data-uuid=&quot;0bfe6813-56ec-4694-a2d4-9c6fb2e01b6d&quot;&gt;
+&lt;span&gt;a &lt;/span&gt;&lt;strong&gt;Date&lt;/strong&gt;&lt;span&gt;: it depends on the data source availability and so it is not possible to define a common date to consider as response evaluation date. It could be the &lt;/span&gt;&lt;em&gt;&lt;span&gt;Visit &lt;/span&gt;&lt;/em&gt;&lt;span&gt;date or the date of the &lt;/span&gt;&lt;em&gt;&lt;span&gt;Evidence. &lt;/span&gt;&lt;/em&gt;&lt;span&gt;The common aspect is that it &lt;/span&gt;&lt;span&gt;must &lt;/span&gt;&lt;span&gt;correspond to one documented report (e.g. Visit, Imaging, Biomarker, Lab Report).&lt;/span&gt;
+
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;
+&lt;b&gt;Note:&lt;/b&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+&lt;span&gt;It could seem like a repetition of the &lt;/span&gt;&lt;em&gt;&lt;span&gt;Disease Status&lt;/span&gt;&lt;/em&gt;&lt;span&gt;, but it doesn&amp;rsquo;t. It is important to have &lt;/span&gt;&lt;em&gt;&lt;span&gt;Treatment Response&lt;/span&gt;&lt;/em&gt;&lt;span&gt; and &lt;/span&gt;&lt;em&gt;&lt;span&gt;Disease Status&lt;/span&gt;&lt;/em&gt;&lt;span&gt; separated because they have different purposes. The &lt;/span&gt;&lt;em&gt;&lt;span&gt;Treatment Response&lt;/span&gt;&lt;/em&gt;&lt;span&gt; is used to evaluate the effects of the &lt;/span&gt;&lt;em&gt;&lt;span&gt;Treatment &lt;/span&gt;&lt;/em&gt;&lt;span&gt;while &lt;/span&gt;&lt;em&gt;&lt;span&gt;Disease Status&lt;/span&gt;&lt;/em&gt;&lt;span&gt; is to represent the evolution of the &lt;/span&gt;&lt;em&gt;&lt;span&gt;Cancer Condition&lt;/span&gt;&lt;/em&gt;&lt;span&gt; over the time.&lt;/span&gt;
+
+    &lt;/p&gt;
+
+    &lt;p&gt;
+It is the &lt;em&gt;Disease Status &lt;/em&gt;that evolves over the time not the &lt;em&gt;Treatment Response&lt;/em&gt;
+
+    &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Treatment Response</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#TumorGrade -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#TumorGrade">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#definedByBiopsy"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;html&gt;
+  &lt;head&gt;
+		&lt;style&gt;
+			p {padding:0px; margin:0px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+  &lt;body&gt;
+Describes a tumour in terms of how abnormal the tumour cells are. This is compared to normal cells. It also describes how abnormal the tissues look under a microscope. It describes the &lt;strong style=&quot;letter-spacing:0.0px;&quot;&gt;&lt;span style=&quot;letter-spacing:0.0px;;letter-spacing:0.0px;&quot;&gt;biological&lt;/span&gt;&lt;/strong&gt;&lt;span style=&quot;letter-spacing:0.0px;&quot;&gt; aggressiveness of the tumour. The grade provides some idea of how the cancer might behave. A low-grade cancer is likely to grow more slowly and be less likely to spread than a high grade one.&lt;/span&gt;&lt;/body&gt;
+&lt;/html&gt;</rdfs:comment>
+        <rdfs:label>Tumor Grade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#TumorSide -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#TumorSide">
+        <rdfs:label>Tumor Side</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://HL7.eu/ontology/CommonCancerModel#Visit -->
+
+
+    <owl:Class rdf:about="http://HL7.eu/ontology/CommonCancerModel#Visit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://HL7.eu/ontology/CommonCancerModel#performedOnAPatient"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Visit</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/ -->
+
+
+
+
+
+<!-- Warning: type declarations were not added automatically. -->
+
+
+<!-- Generated using the Concept Modeler (2024x Refresh3, build 20250512_1710-54c4c136) on 2025-11-28 at 23:38:03 GMT -->

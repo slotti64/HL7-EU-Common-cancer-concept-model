@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MagicDrawProfile="http://www.omg.org/spec/UML/20131001/MagicDrawProfile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/UML/20131001/MagicDrawProfile UML_Standard_Profile.MagicDraw_Profile.profile.uml#_qyr278yyEfCGvM0B9AXrmw">
+  <uml:Profile xmi:id="_18_3_3bc0198_1474039631286_234159_5517" name="CCM Internal Implementation Profile" visibility="public" URI="" metamodelReference="_18_3_3bc0198_1474039631287_656415_5518">
+    <eAnnotations xmi:id="_qyucvMyyEfCGvM0B9AXrmw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <contents xmi:type="ecore:EPackage" xmi:id="_qyucvcyyEfCGvM0B9AXrmw" name="CCMInternalImplementationProfile" nsURI="http://CCM_Internal_Implementation_Profile/_18_3_3bc0198_1474039631286_234159_5517" nsPrefix="CCMInternalImplementationProfile">
+        <eAnnotations xmi:id="_qyucvsyyEfCGvM0B9AXrmw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_qyucv8yyEfCGvM0B9AXrmw" key="originalName" value="CCM Internal Implementation Profile"/>
+        </eAnnotations>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_qyucwMyyEfCGvM0B9AXrmw" name="FileExportPath">
+          <eAnnotations xmi:id="_qyucwcyyEfCGvM0B9AXrmw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_0_5_3bc0198_1465658479033_673028_4293">
+            <details xmi:id="_qyucwsyyEfCGvM0B9AXrmw" key="originalName" value="File Export Path"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_qyucw8yyEfCGvM0B9AXrmw" name="base_Package" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Package"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_qyucxcyyEfCGvM0B9AXrmw" name="fileExportPath" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_qyucx8yyEfCGvM0B9AXrmw" name="GeneralizationImpostor">
+          <eAnnotations xmi:id="_qyucyMyyEfCGvM0B9AXrmw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_19_0_1_17770441_1547494177302_100148_4610">
+            <details xmi:id="_qyucycyyEfCGvM0B9AXrmw" key="originalName" value="Generalization Impostor"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_qyucysyyEfCGvM0B9AXrmw" name="base_Realization" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Realization"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_qyuczMyyEfCGvM0B9AXrmw" name="ImplicationDiscovery">
+          <eAnnotations xmi:id="_qyuczcyyEfCGvM0B9AXrmw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_2021x_2_1e5304bb_1634314141992_793309_1272">
+            <details xmi:id="_qyuczsyyEfCGvM0B9AXrmw" key="originalName" value="Implication Discovery"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_qyucz8yyEfCGvM0B9AXrmw" name="implicationDiscoveryKey" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_qyuc0cyyEfCGvM0B9AXrmw" name="base_Package" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Package"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+      </contents>
+    </eAnnotations>
+    <packageImport xmi:id="_18_3_3bc0198_1474039631287_656415_5518">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:id="_0primitiveTypesCCM_Internal_Implementation_Profile">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:id="_0javaPrimitiveTypesCCM_Internal_Implementation_Profile">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_5_3bc0198_1465658479033_673028_4293" name="File Export Path" visibility="public">
+      <ownedComment xmi:id="_18_0_5_3bc0198_1465658479080_646140_4295" annotatedElement="_18_0_5_3bc0198_1465658479033_673028_4293" body="Anything that can be referenced by an IRI in an ontology or vocabulary."/>
+      <ownedAttribute xmi:id="_18_0_5_3bc0198_1465658479096_779557_4297" name="base_Package" visibility="private" association="_18_0_5_3bc0198_1465658479096_819274_4296">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Package"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2024x_1_43e018a_1698429437092_223907_1327" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2024x_1_43e018a_1698429437093_597644_1328" name="" visibility="public" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_0_5_3bc0198_1465658479080_630495_4294" name="fileExportPath" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_5_3bc0198_1465658479096_819274_4296" name="" visibility="public" memberEnd="_18_0_5_3bc0198_1465658479096_779557_4297 _18_0_5_3bc0198_1465658479096_31809_4298" navigableOwnedEnd="_18_0_5_3bc0198_1465658479096_31809_4298">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_5_3bc0198_1465658479096_31809_4298" name="extension_Resource" visibility="private" type="_18_0_5_3bc0198_1465658479033_673028_4293" aggregation="composite" association="_18_0_5_3bc0198_1465658479096_819274_4296">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_5_3bc0198_1465658479096_167834_4299" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_5_3bc0198_1465658479096_918608_4300" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_19_0_1_17770441_1547494177302_100148_4610" name="Generalization Impostor" visibility="public">
+      <ownedAttribute xmi:id="_19_0_1_17770441_1547494364236_28079_4617" name="base_Realization" visibility="private" association="_19_0_1_17770441_1547494364236_92693_4616">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Realization"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2024x_1_43e018a_1698429363999_740539_1323" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2024x_1_43e018a_1698429363999_602592_1324" name="" visibility="public" value="1"/>
+      </ownedAttribute>
+      <icon xmi:id="_19_0_1_17770441_1547868036609_196445_4610" content="ac ed 0 5 7a 0 0 4 0 0 0 0 2 0 0 0 63 43 3a 5c 57 6f 72 6b 73 70 61 63 65 5c 43 43 4d 5c 63 63 6d 5c 43 6f 6e 63 65 70 74 20 4d 6f 64 65 6c 65 72 20 50 6c 75 67 69 6e 5c 74 65 6d 70 6c 61 74 65 73 5c 43 6f 6e 63 65 70 74 4d 6f 64 65 6c 69 6e 67 5c 67 65 6e 65 72 61 6c 69 7a 61 74 69 6f 6e 5f 74 6f 5f 67 65 6e 65 72 69 63 2e 73 76 67 0 0 a e0 3c 3f 78 6d 6c 20 76 65 72 73 69 6f 6e 3d 22 31 2e 30 22 20 65 6e 63 6f 64 69 6e 67 3d 22 75 74 66 2d 38 22 3f 3e d a 3c 21 2d 2d 20 47 65 6e 65 72 61 74 6f 72 3a 20 41 64 6f 62 65 20 49 6c 6c 75 73 74 72 61 74 6f 72 20 31 37 2e 30 2e 30 2c 20 53 56 47 20 45 78 70 6f 72 74 20 50 6c 75 67 2d 49 6e 20 2e 20 53 56 47 20 56 65 72 73 69 6f 6e 3a 20 36 2e 30 30 20 42 75 69 6c 64 20 30 29 20 20 2d 2d 3e d a 3c 21 44 4f 43 54 59 50 45 20 73 76 67 20 50 55 42 4c 49 43 20 22 2d 2f 2f 57 33 43 2f 2f 44 54 44 20 53 56 47 20 31 2e 31 2f 2f 45 4e 22 20 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 47 72 61 70 68 69 63 73 2f 53 56 47 2f 31 2e 31 2f 44 54 44 2f 73 76 67 31 31 2e 64 74 64 22 3e d a 3c 73 76 67 20 76 65 72 73 69 6f 6e 3d 22 31 2e 31 22 20 69 64 3d 22 4c 61 79 65 72 5f 31 22 20 78 6d 6c 6e 73 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 32 30 30 30 2f 73 76 67 22 20 78 6d 6c 6e 73 3a 78 6c 69 6e 6b 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 31 39 39 39 2f 78 6c 69 6e 6b 22 20 78 3d 22 30 70 78 22 20 79 3d 22 30 70 78 22 d a 9 20 77 69 64 74 68 3d 22 32 34 70 78 22 20 68 65 69 67 68 74 3d 22 32 34 70 78 22 20 76 69 65 77 42 6f 78 3d 22 30 20 30 20 32 34 20 32 34 22 20 73 74 79 6c 65 3d 22 65 6e 61 62 6c 65 2d 62 61 63 6b 67 72 6f 75 6e 64 3a 6e 65 77 20 30 20 30 20 32 34 20 32 34 3b 22 20 78 6d 6c 3a 73 70 61 63 65 3d 22 70 72 65 73 65 72 76 65 22 3e d a 3c 67 20 69 64 3d 22 67 72 69 64 5f 31 5f 22 3e d a 9 3c 67 20 69 64 3d 22 76 65 72 74 69 63 61 6c 5f 67 75 69 64 65 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 68 6f 72 69 7a 6f 6e 74 61 6c 5f 67 72 69 64 22 3e d a 9 3c 2f 67 3e d a 3c 2f 67 3e d a 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 35 22 3e d a 3c 2f 67 3e d a 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 36 22 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 31 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 32 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 36 5f 31 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 33 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 35 3b 22 3e d a 9 9 3c 2f 67 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 31 30 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 39 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 7a 0 0 4 0 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 36 5f 35 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 38 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 35 3b 22 3e d a 9 9 3c 2f 67 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 37 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 36 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 35 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 34 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 31 31 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 32 33 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 32 32 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 36 5f 34 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 32 31 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 35 3b 22 3e d a 9 9 3c 2f 67 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 32 30 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 31 39 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 36 5f 33 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 31 38 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 35 3b 22 3e d a 9 9 3c 2f 67 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 31 37 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 31 36 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 31 35 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 31 34 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 5f 31 33 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 3c 67 20 69 64 3d 7a 0 0 3 63 22 4c 61 79 65 72 5f 34 5f 31 32 5f 22 20 73 74 79 6c 65 3d 22 6f 70 61 63 69 74 79 3a 30 2e 34 3b 22 3e d a 9 3c 2f 67 3e d a 9 d a 9 9 3c 6c 69 6e 65 61 72 47 72 61 64 69 65 6e 74 20 69 64 3d 22 53 56 47 49 44 5f 31 5f 22 20 67 72 61 64 69 65 6e 74 55 6e 69 74 73 3d 22 75 73 65 72 53 70 61 63 65 4f 6e 55 73 65 22 20 78 31 3d 22 32 39 31 2e 36 22 20 79 31 3d 22 2d 34 30 37 2e 33 34 22 20 78 32 3d 22 32 39 38 2e 36 22 20 79 32 3d 22 2d 34 30 37 2e 33 34 22 20 67 72 61 64 69 65 6e 74 54 72 61 6e 73 66 6f 72 6d 3d 22 6d 61 74 72 69 78 28 31 20 30 20 30 20 2d 31 20 2d 32 38 39 2e 36 20 2d 33 38 37 2e 38 34 29 22 3e d a 9 9 3c 73 74 6f 70 20 20 6f 66 66 73 65 74 3d 22 30 22 20 73 74 79 6c 65 3d 22 73 74 6f 70 2d 63 6f 6c 6f 72 3a 23 46 41 46 41 46 41 22 2f 3e d a 9 9 3c 73 74 6f 70 20 20 6f 66 66 73 65 74 3d 22 31 22 20 73 74 79 6c 65 3d 22 73 74 6f 70 2d 63 6f 6c 6f 72 3a 23 46 35 46 35 46 35 22 2f 3e d a 9 3c 2f 6c 69 6e 65 61 72 47 72 61 64 69 65 6e 74 3e d a 9 3c 72 65 63 74 20 78 3d 22 32 22 20 79 3d 22 31 36 22 20 73 74 79 6c 65 3d 22 66 69 6c 6c 3a 75 72 6c 28 23 53 56 47 49 44 5f 31 5f 29 3b 22 20 77 69 64 74 68 3d 22 37 22 20 68 65 69 67 68 74 3d 22 37 22 2f 3e d a 9 3c 6c 69 6e 65 20 73 74 79 6c 65 3d 22 66 69 6c 6c 3a 6e 6f 6e 65 3b 73 74 72 6f 6b 65 3a 23 34 32 34 32 34 32 3b 73 74 72 6f 6b 65 2d 6d 69 74 65 72 6c 69 6d 69 74 3a 31 30 3b 22 20 78 31 3d 22 39 2e 35 22 20 79 31 3d 22 32 33 22 20 78 32 3d 22 39 2e 35 22 20 79 32 3d 22 31 36 22 2f 3e d a 9 3c 70 6f 6c 79 67 6f 6e 20 73 74 79 6c 65 3d 22 66 69 6c 6c 3a 6e 6f 6e 65 3b 73 74 72 6f 6b 65 3a 23 33 46 35 31 42 35 3b 73 74 72 6f 6b 65 2d 6d 69 74 65 72 6c 69 6d 69 74 3a 31 30 3b 22 20 70 6f 69 6e 74 73 3d 22 32 30 2e 35 2c 32 2e 35 20 32 30 2e 35 2c 39 20 31 34 2c 32 2e 35 20 9 22 2f 3e d a 9 3c 6c 69 6e 65 20 73 74 79 6c 65 3d 22 66 69 6c 6c 3a 6e 6f 6e 65 3b 73 74 72 6f 6b 65 3a 23 33 46 35 31 42 35 3b 73 74 72 6f 6b 65 2d 6d 69 74 65 72 6c 69 6d 69 74 3a 31 30 3b 22 20 78 31 3d 22 37 2e 35 22 20 79 31 3d 22 31 35 2e 35 22 20 78 32 3d 22 31 37 2e 35 22 20 79 32 3d 22 35 2e 35 22 2f 3e d a 9 3c 6c 69 6e 65 20 73 74 79 6c 65 3d 22 66 69 6c 6c 3a 6e 6f 6e 65 3b 73 74 72 6f 6b 65 3a 23 34 32 34 32 34 32 3b 73 74 72 6f 6b 65 2d 6d 69 74 65 72 6c 69 6d 69 74 3a 31 30 3b 22 20 78 31 3d 22 32 22 20 79 31 3d 22 31 35 2e 35 22 20 78 32 3d 22 31 30 22 20 79 32 3d 22 31 35 2e 35 22 2f 3e d a 3c 2f 67 3e d a 3c 67 20 69 64 3d 22 4c 61 79 65 72 5f 34 22 3e d a 3c 2f 67 3e d a 3c 2f 73 76 67 3e d a 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 " format="custom_created.mdico" location=""/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_19_0_1_17770441_1547494364236_92693_4616" name="" visibility="public" memberEnd="_19_0_1_17770441_1547494364236_28079_4617 _19_0_1_17770441_1547494364236_245454_4618" navigableOwnedEnd="_19_0_1_17770441_1547494364236_245454_4618">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_19_0_1_17770441_1547494364236_245454_4618" name="extension_Generalization Impostor" visibility="private" type="_19_0_1_17770441_1547494177302_100148_4610" aggregation="composite" association="_19_0_1_17770441_1547494364236_92693_4616">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_19_0_1_17770441_1547494364236_719021_4619" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_19_0_1_17770441_1547494364236_579180_4620" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_2021x_2_1e5304bb_1634314141992_793309_1272" name="Implication Discovery" visibility="public">
+      <ownedAttribute xmi:id="_2021x_2_1e5304bb_1634314141992_1081_1273" name="implicationDiscoveryKey" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_2021x_2_1e5304bb_1634314141992_505730_1274" name="base_Package" visibility="private" association="_2021x_2_1e5304bb_1634314141992_910501_1275">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Package"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2024x_1_43e018a_1698429429788_427138_1325" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2024x_1_43e018a_1698429429788_244127_1326" name="" visibility="public" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_2021x_2_1e5304bb_1634314141992_910501_1275" name="" visibility="public" memberEnd="_2021x_2_1e5304bb_1634314141992_505730_1274 _2021x_2_1e5304bb_1634314141992_968558_1276" navigableOwnedEnd="_2021x_2_1e5304bb_1634314141992_968558_1276">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_2021x_2_1e5304bb_1634314141992_968558_1276" name="extension_Implication Discovery" visibility="private" type="_2021x_2_1e5304bb_1634314141992_793309_1272" aggregation="composite" association="_2021x_2_1e5304bb_1634314141992_910501_1275">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2021x_2_1e5304bb_1634314141992_656946_1278" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2021x_2_1e5304bb_1634314141992_637594_1277" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:id="_be00301_1073394351331_445580_2profileApplicationCCM_Internal_Implementation_Profile">
+      <eAnnotations xmi:id="_q14UwcyyEfCGvM0B9AXrmw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.profile.uml#_qyr278yyEfCGvM0B9AXrmw"/>
+      </eAnnotations>
+      <appliedProfile href="UML_Standard_Profile.MagicDraw_Profile.profile.uml#_be00301_1073394351331_445580_2"/>
+    </profileApplication>
+  </uml:Profile>
+  <MagicDrawProfile:auxiliaryResource xmi:id="_q14UwsyyEfCGvM0B9AXrmw" base_Element="_18_3_3bc0198_1474039631286_234159_5517"/>
+  <MagicDrawProfile:InvisibleStereotype xmi:id="_q18mMsyyEfCGvM0B9AXrmw" base_Element="_18_0_5_3bc0198_1465658479033_673028_4293"/>
+</xmi:XMI>

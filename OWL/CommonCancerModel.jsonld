@@ -1,0 +1,2519 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "Biomarker"
+    }, {
+      "@value" : "Biopsy"
+    }, {
+      "@value" : "Genomics"
+    }, {
+      "@value" : "Imaging"
+    }, {
+      "@value" : "Lab Report"
+    }, {
+      "@value" : "Visit"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid100",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#basedOnOneOrMoreProcedure"
+  } ]
+}, {
+  "@id" : "_:genid101",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#basedOnOneOrMoreVisit"
+  } ]
+}, {
+  "@id" : "_:genid102",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canEvolveThroughDiseaseOverTimeAndSpace"
+  } ]
+}, {
+  "@id" : "_:genid103",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasCancerStage"
+  } ]
+}, {
+  "@id" : "_:genid104",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#isAffectedByPatient"
+  } ]
+}, {
+  "@id" : "_:genid105",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#isTheTargetOfOneOrMoreTreatment"
+  } ]
+}, {
+  "@id" : "_:genid106",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedByBiopsy"
+  } ]
+}, {
+  "@id" : "_:genid107",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasATumorGrade"
+  } ]
+}, {
+  "@id" : "_:genid108",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasAnAssertedDate"
+  } ]
+}, {
+  "@id" : "_:genid109",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveABiomarkerType"
+  } ]
+}, {
+  "@id" : "_:genid110",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveAnImagingType"
+  } ]
+}, {
+  "@id" : "_:genid111",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#BaseOfAssertion"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedThroughBaseOfAssertion"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid112",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedThrough"
+  } ]
+}, {
+  "@id" : "_:genid113",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMoreLoco-regionalSite"
+  } ]
+}, {
+  "@id" : "_:genid114",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMoreMetastaticSite"
+  } ]
+}, {
+  "@id" : "_:genid115",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedThroughImaging"
+  } ]
+}, {
+  "@id" : "_:genid116",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#isTheTargetOfOneOrMoreTreatment"
+  } ]
+}, {
+  "@id" : "_:genid117",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#ExtentType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasOneOrMoreExtentType"
+  } ]
+}, {
+  "@id" : "_:genid118",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#isTheTargetOfOneOrMoreTreatment"
+  } ]
+}, {
+  "@id" : "_:genid119",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasAnAssertedDate"
+  } ]
+}, {
+  "@id" : "_:genid120",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#relatedToACancerCondition"
+  } ]
+}, {
+  "@id" : "_:genid121",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveABiomarkerType"
+  } ]
+}, {
+  "@id" : "_:genid122",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveADiseaseExtent"
+  } ]
+}, {
+  "@id" : "_:genid123",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveAGenomics"
+  } ]
+}, {
+  "@id" : "_:genid124",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveATumorGrade"
+  } ]
+}, {
+  "@id" : "_:genid125",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveAnImagingType"
+  } ]
+}, {
+  "@id" : "_:genid126",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseStatus"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasADiseaseStatus"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid127",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#EvolutionType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasAnEvolutionType"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid128",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#isAnOngoing"
+  } ]
+}, {
+  "@id" : "_:genid129",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#startDate"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid130",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#endDate"
+  } ]
+}, {
+  "@id" : "_:genid131",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedThroughEvidence"
+  } ]
+}, {
+  "@id" : "_:genid132",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedByBiopsy"
+  } ]
+}, {
+  "@id" : "_:genid133",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedBySurgery"
+  } ]
+}, {
+  "@id" : "_:genid134",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#dependingOnEvidence"
+  } ]
+}, {
+  "@id" : "_:genid135",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#dependingOnProcedure"
+  } ]
+}, {
+  "@id" : "_:genid136",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#mustBeUpdatedDuringAVisit"
+  } ]
+}, {
+  "@id" : "_:genid137",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedBy"
+  } ]
+}, {
+  "@id" : "_:genid138",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveComorbidities"
+  } ]
+}, {
+  "@id" : "_:genid139",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasCancerCondition"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "Progression"
+    }, {
+      "@value" : "Recurrence"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid140",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasOneOrMoreVisit"
+  } ]
+}, {
+  "@id" : "_:genid141",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#isUnderOneOrMoreTreatment"
+  } ]
+}, {
+  "@id" : "_:genid142",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasALastCheck"
+  } ]
+}, {
+  "@id" : "_:genid143",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasEvolvingDemographics"
+  } ]
+}, {
+  "@id" : "_:genid144",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#LifeStatus"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasAnEvolvingLifeStatus"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid145",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#documentedInAReport"
+  } ]
+}, {
+  "@id" : "_:genid146",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#isRelatedToACancerCondition"
+  } ]
+}, {
+  "@id" : "_:genid147",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TriggerEvent"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#causedByTriggerEvent"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid148",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasATargetSite"
+  } ]
+}, {
+  "@id" : "_:genid149",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#startDate"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid150",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#endDate"
+  } ]
+}, {
+  "@id" : "_:genid151",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasReport"
+  } ]
+}, {
+  "@id" : "_:genid152",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canBeOneOrASetOfSingleTreatmentsOrACombinationOf"
+  } ]
+}, {
+  "@id" : "_:genid153",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMore"
+  } ]
+}, {
+  "@id" : "_:genid154",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Intent"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasAnIntent"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid155",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#basedOn"
+  } ]
+}, {
+  "@id" : "_:genid156",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#evaluatedDuringAVisit"
+  } ]
+}, {
+  "@id" : "_:genid157",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#relatedToATreatment"
+  } ]
+}, {
+  "@id" : "_:genid158",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TreatmentResponseType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasATreatmentResponseType"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid159",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedByBiopsy"
+  } ]
+}, {
+  "@id" : "_:genid160",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#performedOnAPatient"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "Local"
+    }, {
+      "@value" : "Loco-regional"
+    }, {
+      "@value" : "Metastatic"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "Definitive (curative)"
+    }, {
+      "@value" : "Palliative"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "Alive No Evidence of Disease (NED)"
+    }, {
+      "@value" : "Alive with Disease (AWD)"
+    }, {
+      "@value" : "Dead of Disease (DOD)"
+    }, {
+      "@value" : "Dead of Other Cause (DOC)"
+    }, {
+      "@value" : "Dead of Unknown Cause (DUC)"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "Complete Remission"
+    }, {
+      "@value" : "Partial Remission"
+    }, {
+      "@value" : "Progression"
+    }, {
+      "@value" : "Stable Disease"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "screening"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#Evidence"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#Evidence"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#ActiveSurveillance"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#DrugAdministration"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#DrugAdministration"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#Prescription"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#TreatmentPlan"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#HistologyBehaviour"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#TumorGrade"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid64",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#BiomarkerType"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#ImagingType"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid67",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#BiomarkerType"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#ImagingType"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid70",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid73",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid77",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "Complete Remission"
+    }, {
+      "@value" : "Disease Recurrence"
+    }, {
+      "@value" : "Partial Remission"
+    }, {
+      "@value" : "Progression"
+    }, {
+      "@value" : "Stable"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid80",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#ActiveSurveillance"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#DrugAdministration"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid84",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#LastCheck"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid88",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#ActiveSurveillance"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#DrugAdministration"
+    }, {
+      "@id" : "http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid92",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#startDate"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid93",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#endDate"
+  } ]
+}, {
+  "@id" : "_:genid94",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#choiceFromProcedureDate"
+  } ]
+}, {
+  "@id" : "_:genid95",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canBeTheSameOfEvidence"
+  } ]
+}, {
+  "@id" : "_:genid96",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canBeTheSameOfVisit"
+  } ]
+}, {
+  "@id" : "_:genid97",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#dependingOnEvidence"
+  } ]
+}, {
+  "@id" : "_:genid98",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#dependingOnProcedure"
+  } ]
+}, {
+  "@id" : "_:genid99",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedThrougtImaging"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HL7 Common Cancer Model"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "urn:absolute:2.1"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#ActiveSurveillance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\nIt is characterized by a <b>Start Date</b> and an <b>End Date</b>.</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Active Surveillance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid92"
+  }, {
+    "@id" : "_:genid93"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DrugAdministration"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Anti-cancerTreatment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Anti-cancer treatment"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Treatment"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#AssertedDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n<span>Represents the first data when the presence of the&#160;</span><em><span>Cancer Condition </span></em><span>was detected. It depends on the data source availability and on the cancer type, so it is not possible to define a common date to consider as diagnosis date. The common aspect is that it </span><span>must </span><span>correspond to one documented report (e.g. <em>Visit, Biopsy, Surgery, Imaging, Biomarker, Lab Report, Genomics</em>)</span><span style=\"color:black;\"><span>.</span></span></body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Asserted Date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid94"
+  }, {
+    "@id" : "_:genid95"
+  }, {
+    "@id" : "_:genid96"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#BaseOfAssertion",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the type of procedure on the base of the Cancer Condition was detected. It could be a choice from Visit, Biopsy, Surgery, Imaging, Biomarker, Lab Report, ... "
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Biomarker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Evidence"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Biopsy"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Genomics"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Imaging"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Laboratory"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#BiomarkerType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n<span style=\"color:black;\">Represents the type of biomarker on the base of the&#160;<em>Cancer Condition</em></span><span style=\"color:black;\"><span> was detected.&#160;</span></span></body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Biomarker Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid97"
+  }, {
+    "@id" : "_:genid98"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Biopsy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Biopsy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Genomics"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Imaging"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Laboratory"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#BodySite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\nRepresents the first location where Cancer Condition was detected (typically with an Imaging).</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Body Site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid99"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Location"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Topography"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TumorSide"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n    <p>\n<span>Represents the diagnosed cancer and the start of the cancer journey, so the start of the </span><em><span>Cancer Condition (First diagnosis)</span></em><span>. It must have&#160;</span>\n\n    </p>\n\n    <ul>\n      <li data-uuid=\"379f04a8-9eaf-4962-ae0c-40e152b01b71\">\n<span>an </span><strong>Histology Behaviour</strong>\n\n      </li>\n      <li data-uuid=\"60e84af7-c098-4567-94cd-723119e19a75\">\n<span>a</span><strong> Body Site</strong>\n\n      </li>\n      <li data-uuid=\"cd1e2386-a86f-4963-a857-86590c4ddda8\">\n<span>a <strong>Tumour Grade</strong></span>\n\n      </li>\n      <li data-uuid=\"fd968eb2-3dc8-4cd0-a3fa-f1fca8a024ca\">\n<span>an </span><strong>Asserted Date</strong>\n\n      </li>\n      <li data-uuid=\"81b90e10-43e5-4469-971b-4536895bfcbd\">\n<span>a </span><strong>Base of Diagnosis</strong>\n\n      </li>\n      <li>\n<span>a </span><strong>Disease Status</strong>\n\n      </li>\n      <li>\n<span><strong>Last Check</strong></span>\n\n      </li>\n    </ul>\n    <p>\n<span>It can have:</span>\n\n    </p>\n\n    <ul>\n      <li data-uuid=\"1cfc0d9d-ffaa-44c0-956f-4998a12e243c\">\n<span>a </span><strong>Imaging Type</strong>\n\n      </li>\n      <li data-uuid=\"63f4efba-63f3-4e29-aa58-40eff428ad2a\">\n<span>a </span><strong>Biomarker Type</strong>\n\n      </li>\n    </ul>\n    <p>\n<b>Note:</b>\n\n    </p>\n\n    <p>\n<span>Each time a patient has a new cancer (so not related and independent from the first one), they have a new&#160;<em>Cancer Condition</em>. In case in time, there is an updated of the <em>Cancer Condition </em>(releted to the same cell type, so depending on the first cancer), it will be reflected in a new <span><em>Disease over time and space </em>instance.&#160;</span></span>\n\n    </p>\n\n    <p>\n<span>If a cancer is metastatic at the&#160;<em>First diagnosis</em>, the information on the metastasis is collected within the&#160;<em>Cancer Stage</em> not in the<em> <span>Disease over time and space instance</span>.</em></span>\n\n    </p>\n\n    <p>\n<span>The couple </span><strong>Histology Behaviour</strong><span> and </span><strong>Body Site</strong><span> identifies the </span><em><span>Cancer Condition.</span></em>\n\n    </p>\n\n</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cancer Condition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid100"
+  }, {
+    "@id" : "_:genid101"
+  }, {
+    "@id" : "_:genid102"
+  }, {
+    "@id" : "_:genid103"
+  }, {
+    "@id" : "_:genid104"
+  }, {
+    "@id" : "_:genid105"
+  }, {
+    "@id" : "_:genid106"
+  }, {
+    "@id" : "_:genid107"
+  }, {
+    "@id" : "_:genid108"
+  }, {
+    "@id" : "_:genid109"
+  }, {
+    "@id" : "_:genid110"
+  }, {
+    "@id" : "_:genid111"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#PrimaryCancer"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#SecondaryPrimaryCondition"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerStage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n    <p>\n<span>Represents the stage of the </span><em><span>Cancer Condition </span></em>at the <em>First Diagnosis</em> and describes the tumour extent <u>at the time of the first definitive treatment</u><span>. </span><span style=\"color:black;\"><span><u>It never evolves</u> during the cancer journey. </span></span><span>The stage can be </span><em><span>Clinical </span></em><span>(is based on </span><em><span>Imaging</span></em><span>) or </span><em><span>Pathological </span></em><span>(is based in </span><em><span>Surgery</span></em><span>).</span>\n\n    </p>\n\n    <p>\n<span>&#160;</span>\n\n    </p>\n\n    <p>\n<span><b>Note:</b></span>\n\n    </p>\n\n    <p>\n<span>In case in time, there is an extension of the <em>Cancer Condition</em> (releted to the same cell type, so depending on the first cancer), it </span><span>will be reflected in a new <span><em>Disease over time and space </em>instance with</span>&#160;</span><em><span>Disease Status</span></em><span> (as </span><em><span>Progression or Recurrence</span></em><span>), while the <em>Cancer Stage</em> will not change.</span>\n\n    </p>\n\n    <p>\n<span>If a cancer is metastatic at the <em>First diagnosis</em>, the information on the metastasis is collected within the&#160;<em>Cancer Stage</em> not in the<em> Disease over time and space </em>instance<em>).</em></span>\n\n    </p>\n\n</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cancer Stage"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#ClinicalStage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Clinical Stage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerStage"
+  }, {
+    "@id" : "_:genid112"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#PathologicalStage"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#ClinicalTrials",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n<span>A patient can participate in trials and represent its purposes and objectives.</span></body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Clinical Trials"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Comorbidities",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n<span>Represent the possible other relevant diseases that affect them. It can evolve during the time.</span></body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Comorbidities"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Demographics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n<span>Represents demographic information (e.g. the sex, birth date (or only year)). It can evolve during the time.</span></body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Demographics"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n<span style=\"color:black;\">r</span>epresent the location where the cancer is extended at the time of the assertion (typically evaluated with an <em style=\"letter-spacing:0.0px;color:black;\"><span style=\"letter-spacing:0.0px; color:black;;letter-spacing:0.0px;\">Imaging</span></em><span style=\"color:black;;letter-spacing:0.0px;\">). It has</span>\n    <ul>\n      <li data-uuid=\"633dbd01-7bcf-4bcf-9131-c493d4de20ca\">\n<span style=\"color:black;\">one or more <em>Extent type </em>that can be:</span>\n        <ul>\n          <li>\n<span style=\"color:black;\"><em>Local</em>: in case the&#160;site is the primary site (the site of the&#160;<em>Cancer Condition</em> is the same)</span>\n\n          </li>\n          <li>\n<span style=\"color:black;\"><em>Loco-regional</em>: i<span>n case the site is the primary site and the surrounding anatomical region (also to the regional lymph nodes but with no distant metastases)</span></span>\n\n          </li>\n          <li>\n<span style=\"color:black;\"><em>Metastatic</em>: in case there are also distant metastases.</span>\n\n          </li>\n        </ul>\n\n      </li>\n      <li data-uuid=\"30d97dd8-2962-42ff-9eca-81d41442dbd9\">\n<span style=\"color:black;\">can have one or more:</span>\n        <ul>\n          <li>\n<span style=\"color:black;\"><em>Loco-regional site</em>: the specific site of the surrounding anatomical region involved&#160;</span>\n\n          </li>\n          <li>\n<span style=\"color:black;\"><em>Metastatic site</em>: the specific site of the metastases.</span>\n\n          </li>\n        </ul>\n\n      </li>\n    </ul>\n</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Disease Extent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid113"
+  }, {
+    "@id" : "_:genid114"
+  }, {
+    "@id" : "_:genid115"
+  }, {
+    "@id" : "_:genid116"
+  }, {
+    "@id" : "_:genid117"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n    <p>\n<span>Represents the evolution over the time and over the space of the <em>Cancer Condition. </em>Every time that there is a new evaluation, there will be a new instance of<em> Disease over time and space </em>that</span><span style=\"letter-spacing:0.0px;\">&#160;<strong>must </strong>have:</span>\n\n    </p>\n\n    <ul>\n      <li data-uuid=\"fc4b3f83-987d-4833-b7e7-1334a3009278\" style=\"color:black;\">\n<span style=\"color:black;\">a <strong>Disease Status</strong></span>\n\n      </li>\n      <li data-uuid=\"79a7cfe0-2c6d-4d8f-b50d-f484fe04c070\">\nan <strong>Asserted Date</strong>\n\n      </li>\n      <li data-uuid=\"89aacef4-88a2-4be2-8101-fb9b558b7642\">\na <strong>Base of Assertion</strong>:\n\n      </li>\n    </ul>\n    <p>\nand it <strong>can </strong>have:\n\n    </p>\n\n    <ul>\n      <li style=\"color:black;\">\n<span style=\"color:black;\"><strong>Disease Extent: </strong></span><span style=\"color:black;;letter-spacing:0.0px;\">It has</span>\n        <ul>\n          <li data-uuid=\"633dbd01-7bcf-4bcf-9131-c493d4de20ca\">\n<span style=\"color:black;\">one or more <em>Extent type </em></span><span style=\"color:black;\">that </span><span style=\"color:black;\">can have one or more:</span>\n            <ul>\n              <li>\n<span style=\"color:black;\"><em>Loco-regional site</em></span>\n\n              </li>\n              <li>\n<span style=\"color:black;\"><em>Metastatic site</em></span>\n\n              </li>\n            </ul>\n\n          </li>\n        </ul>\n\n      </li>\n      <li data-uuid=\"2cf5ab99-8eb3-4782-bf5b-059cc0b5f203\" style=\"color:black;\">\n<span style=\"color:black;\">a <strong>Tumour Grade</strong></span>\n\n      </li>\n      <li data-uuid=\"28a187ea-32b9-41fa-830f-e9b7679efb43\" style=\"color:black;\">\n<span style=\"color:black;\">a&#160;<strong>Imaging Type</strong></span>\n\n      </li>\n      <li data-uuid=\"730da9f5-36b6-4948-b7ff-962ec2f353ad\" style=\"color:black;\">\n<span style=\"color:black;\">a <strong>Biomarker Type</strong></span>\n\n      </li>\n      <li data-uuid=\"91d132ff-a787-4bd0-a1b4-c81968a4151e\" style=\"color:black;\">\n<span style=\"color:black;\">a <strong>Genomics</strong></span>\n\n      </li>\n    </ul>\n    <p>\n<b>Note:</b>\n\n    </p>\n\n    <p>\n<span style=\"color:black;\">After the First Diagnosis, every time that there is an evaluation of the Cancer Codition during a <em>Visit</em>,&#160;a new instance of <em>Disease Evolution </em>is created.</span>\n\n    </p>\n\n    <p>\n<span style=\"color:black;\">If a cancer is metastatic at the&#160;<em>First diagnosis</em>, the information on the metastasis is collected within the <em>Cancer Stage</em> not in the<em> Disease Evolution over time and space.</em></span>\n\n    </p>\n\n</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Disease over time and space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid118"
+  }, {
+    "@id" : "_:genid119"
+  }, {
+    "@id" : "_:genid120"
+  }, {
+    "@id" : "_:genid121"
+  }, {
+    "@id" : "_:genid122"
+  }, {
+    "@id" : "_:genid123"
+  }, {
+    "@id" : "_:genid124"
+  }, {
+    "@id" : "_:genid125"
+  }, {
+    "@id" : "_:genid126"
+  }, {
+    "@id" : "_:genid127"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseStatus",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n<span style=\"color:black;\">Represents the status of the&#160;<em>Cancer Condition </em>evaluated during a <em>Visit</em>. It could be one of the following:&#160;</span>\n    <ul>\n      <li style=\"color:black;\">\n<span style=\"color:black;\"><em>Progression: </em>in case the cancer is grown respect the previous <em>Visit</em></span>\n\n      </li>\n      <li style=\"color:black;\">\n<span style=\"color:black;\"><em>Stable Disease:&#160;</em>in case the cancer is not grown or&#160;shrunk respect the previous <em>Visit</em></span>\n\n      </li>\n      <li style=\"color:black;\">\n<span style=\"color:black;\"><em>Partial Remission:&#160;</em>in case the cancer shrunk respect the previous <em>Visit</em></span>\n\n      </li>\n      <li style=\"color:black;\">\n<span style=\"color:black;\"><em>Complete Remission: </em>in case the cancer completely disappeared</span>\n\n      </li>\n      <li style=\"color:black;\">\n<span style=\"color:black;\"><em>Recurrence: </em>in case the cancer after complete remission re-appeared or cancer that has recurred (come back), usually after a period of time during which the cancer <strong>could not be&#160;detected</strong>).&#160;</span>\n\n      </li>\n    </ul>\n</body>\n</html>"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid8"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#DrugAdministration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n<span>It is characterized by a </span><strong>Start Date,</strong><span> an</span><strong> End Date </strong><span>and a possible indication if the therapy is </span><strong>Ongoing </strong><span>(in case of Immunotherapy).</span></body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Drug Administration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid128"
+  }, {
+    "@id" : "_:genid129"
+  }, {
+    "@id" : "_:genid130"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Encounter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Encounter"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Visit"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Evidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Evidence"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#EvolutionType",
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid14"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#ExtentType",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n<span style=\"color:black;\">It can be:</span>\n    <ul>\n      <li>\n<span style=\"color:black;\"><em>Local</em>: in case the&#160;site is the primary site (the site of the&#160;<em>Cancer Condition</em> is the same)</span>\n\n      </li>\n      <li>\n<span style=\"color:black;\"><em>Loco-regional</em>: i<span>n case the site is the primary site and the surrounding anatomical region (also to the regional lymph nodes but with no distant metastases)</span></span>\n\n      </li>\n      <li>\n<span style=\"color:black;\"><em>Metastatic</em>: in case there are also distant metastases.</span>\n\n      </li>\n    </ul>\n</body>\n</html>"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid17"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Genomics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Genomics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Evidence"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  }, {
+    "@id" : "_:genid131"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Imaging"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Laboratory"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#HistologyBehaviour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Histology describes the cell type of the neoplasm and the behaviour describes whether a tumour is malignant or benign, whether it is a carcinoma in situ or a neoplasm of uncertain malignancy. Typicallycally it is defined with Surgery and Biopsy). "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Histology Behaviour"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid132"
+  }, {
+    "@id" : "_:genid133"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Morphology"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Imaging",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Imaging"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Evidence"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Laboratory"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#ImagingType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n<span>Represents the type of image on the base of the Cancer Condition was detected</span></body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Imaging Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid134"
+  }, {
+    "@id" : "_:genid135"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Immunotherapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\nA type of therapy that uses substances to stimulate or suppress the immune system to help the body fight cancer, infection, and other diseases.</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Immunotherapy"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Intent",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An Intent: indicates if it is curative or not (so only to decrease the symptoms) for the cancer. It can be a choice from: Definitive and Palliative."
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid21"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Laboratory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Laboratory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Evidence"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"
+  }, {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#LastCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n    <p>\n<span>Represent the date of the <em>Visit </em>in which the<em> Cancer Condition</em> has been evaluated.</span>\n\n    </p>\n\n</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Last Check"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid136"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#LifeStatus",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n    <p>\n<strong>Life Status (and Cause)</strong><em>&#160;</em>that represent the evolving life status of the patient verified during a <em>Visit, </em><u>after the first treatment</u>, to indicate if it is alive (with disease or not) or dead (with information on it). <span>It can evolve during the time. It could be one of the following:&#160;</span>\n\n    </p>\n\n    <ul>\n      <li data-uuid=\"8065c29c-71d9-4d21-a159-a24e6cbf6e1b\">\n<span><em>Alive, No Evidence of Disease (NED)</em>: in case it is alive and there are no evidence of the disease presence anymore</span>\n\n      </li>\n      <li data-uuid=\"c3b87f80-fffd-44bd-b52f-39a64429950f\">\n<span><em>Dead of Disease (DOD)</em>: in case it is dead with cancer as sure reason</span>\n\n      </li>\n      <li data-uuid=\"b83789d3-805c-41d5-af77-180e4df33856\">\n<span><em>Dead of Other Cause (DOC)</em>: in case it is dead, but the reason is not cancer for sure</span>\n\n      </li>\n      <li data-uuid=\"4819a46a-b4b5-4ad7-b9bc-d8eed79d7ac6\">\n<em>Dead of Unknow Cause (DUC)</em>: <span>in case it is dead, but the reason is unknow (it could be or not cancer)</span>\n\n      </li>\n      <li data-uuid=\"a525ee59-dc19-4a87-8876-ef326ac71576\">\n<span><em>Alive With Disease (AWD)</em>: in case it is alive and the cancer it is still present.</span>\n\n      </li>\n    </ul>\n</body>\n</html>"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid24"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Location"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Loco-regionalSite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\nThe specific site of the surrounding anatomical region involved</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Loco-regional Site"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#MetastaticSite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n<span style=\"color:black;\">The specific site of the metastases.</span></body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Metastatic Site"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Morphology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Morphology"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#PathologicalStage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pathological Stage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerStage"
+  }, {
+    "@id" : "_:genid137"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Patient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n    <p>\n<span>Represents the subject that is affected by one or more </span><em><span>Cancer Conditions</span></em><span>. It has:&#160;</span>\n\n    </p>\n\n    <ul>\n      <li data-uuid=\"6ff77ae1-b454-4c82-9527-00b35041611b\">\n<strong>Demographics</strong>\n\n      </li>\n      <li data-uuid=\"38e01979-a40f-4a47-a900-728f87322b0d\">\n<strong>Life Status (and Cause)</strong>\n\n      </li>\n      <li data-uuid=\"38e01979-a40f-4a47-a900-728f87322b0d\">\n<span><strong>Last Check</strong> </span>\n\n      </li>\n    </ul>\n    <p>\n<span>It can have:</span>\n\n    </p>\n\n    <ul>\n      <li data-uuid=\"36585d23-981d-4987-9962-6fdc00fa3b86\">\n<span>one or more&#160;</span><strong>Comorbidities</strong>\n\n      </li>\n    </ul>\n    <p>\n<b>Note:       \n</b><br><em><span>Life Status (and Cause), Demographics&#160;</span></em><span>and </span><em><span>Comorbidity </span></em><span>can evolve during the journey.&#160;</span>\n\n    </p>\n\n</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid138"
+  }, {
+    "@id" : "_:genid139"
+  }, {
+    "@id" : "_:genid140"
+  }, {
+    "@id" : "_:genid141"
+  }, {
+    "@id" : "_:genid142"
+  }, {
+    "@id" : "_:genid143"
+  }, {
+    "@id" : "_:genid144"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Subject"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Prescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Prescription"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TreatmentPlan"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#PrimaryCancer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Primary Cancer"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Procedure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid145"
+  }, {
+    "@id" : "_:genid146"
+  }, {
+    "@id" : "_:genid147"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Radiotherapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\nIt is characterized by a <b>Start Date,</b> an <b>End Date</b> and a <b>Target Site</b>.</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Radiotherapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  }, {
+    "@id" : "_:genid148"
+  }, {
+    "@id" : "_:genid149"
+  }, {
+    "@id" : "_:genid150"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Report",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Report"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#SecondaryPrimaryCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Secondary Primary Condition"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Subject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Subject"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It is characterized by a Date and a Target Site."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surgery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  }, {
+    "@id" : "_:genid151"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#TargetSite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Target Site"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Topography",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Topography"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Treatment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n    <p>\n<span>Represents the single or combination of procedures and therapy defined to treat a </span><em><span>Cancer Condition or a </span><span style=\"color:black;\"><span>Disease Extent</span></span></em><span>.</span><b>Note:</b>\n\n    </p>\n\n    <p>\n<span>Also Diet or Exercise can be prescribed </span><em><span>Treatments </span></em><span>but are not considered for the first period.&#160;</span>\n\n    </p>\n\n    <p>\n<span>A single </span><em><span>Treatment </span></em><span>can evolve during the time.</span>\n\n    </p>\n\n    <p>\n<span>&#160;</span>\n\n    </p>\n\n    <p>\n<span><b>Note:</b></span>\n\n    </p>\n\n    <p>\n<span>Tipically it is very difficult to define if the target is the <em>Cancer Condition</em> or to a specific <em>Diasease Extent</em>.</span>\n\n    </p>\n\n    <p>\n<span>Also Diet or Exercise can be prescribed&#160;</span><em><span>Treatments </span></em><span>but are not considered for the first period.&#160;</span><span> </span>\n\n    </p>\n\n</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Treatment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid152"
+  }, {
+    "@id" : "_:genid153"
+  }, {
+    "@id" : "_:genid154"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#TreatmentPlan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n    <p>\n<span>It could be useful to record not only the actual treatment, but also what was planned. In fact, the </span><em><span>Treatment </span></em><span>can change based on the </span><em><span>Treatment </span></em><span>Response. It could be also useful to consider guidelines and if a patient has agreed or not.</span>\n\n    </p>\n\n</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Treatment Plan"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n    <p>\n<span>Represents the standard way to measure how well a cancer patient responds to a single <em>Treatment</em>. It is based on whether tumours shrink, stay the same, or get bigger.&#160;</span><span style=\"color:black;\"><span><span>It i</span></span><span>s evaluated by cli</span></span><span>nician during a&#160;</span><em><span>Visit </span></em><span>based on an </span><em><span>Evidence</span></em><span>. It can be one of the following:</span>\n\n    </p>\n\n    <ul>\n      <li data-uuid=\"46f92cde-2d84-4b36-b0c5-28514261826b\">\n<em><span>Progression</span></em><span> (in case the cancer is grown respect the previous </span><em><span>Visit</span></em><span>)</span>\n\n      </li>\n      <li data-uuid=\"4ca02e14-9620-4a80-8af9-5e5ca06ae281\">\n<em><span>Stable Disease</span></em><span> (in case the cancer is not changed respect the previous </span><em><span>Visit</span></em><span>)</span>\n\n      </li>\n      <li data-uuid=\"6582ab26-40b1-4a96-b4de-5d2b14c8e410\">\n<em><span>Partial Remission </span></em><span>(in case the cancer shrunk respect the previous </span><em><span>Visit</span></em><span>)</span>\n\n      </li>\n      <li data-uuid=\"9ce790bf-ca0d-4a0a-8351-f53f5e105c43\">\n<span><em>Complete </em>Remission (in case the cancer completely disappeared).</span>\n\n      </li>\n    </ul>\n    <p>\n<span>It must have:</span>\n\n    </p>\n\n    <ul>\n      <li data-uuid=\"103aecff-236c-4c3b-a321-4c85cde67171\">\n<span>a </span><strong>Based on</strong><span>:&#160; the type of </span><em><span>Evidence </span></em><span>on the base of the response is evaluated during the </span><em><span>Visit</span></em><span>. It could be a choice from </span><em><span>Imaging, Lab Report, Biomarker, ...</span></em>\n\n      </li>\n      <li data-uuid=\"0bfe6813-56ec-4694-a2d4-9c6fb2e01b6d\">\n<span>a </span><strong>Date</strong><span>: it depends on the data source availability and so it is not possible to define a common date to consider as response evaluation date. It could be the </span><em><span>Visit </span></em><span>date or the date of the </span><em><span>Evidence. </span></em><span>The common aspect is that it </span><span>must </span><span>correspond to one documented report (e.g. Visit, Imaging, Biomarker, Lab Report).</span>\n\n      </li>\n    </ul>\n    <p>\n<b>Note:</b>\n\n    </p>\n\n    <p>\n<span>It could seem like a repetition of the </span><em><span>Disease Status</span></em><span>, but it doesn&rsquo;t. It is important to have </span><em><span>Treatment Response</span></em><span> and </span><em><span>Disease Status</span></em><span> separated because they have different purposes. The </span><em><span>Treatment Response</span></em><span> is used to evaluate the effects of the </span><em><span>Treatment </span></em><span>while </span><em><span>Disease Status</span></em><span> is to represent the evolution of the </span><em><span>Cancer Condition</span></em><span> over the time.</span>\n\n    </p>\n\n    <p>\nIt is the <em>Disease Status </em>that evolves over the time not the <em>Treatment Response</em>\n\n    </p>\n\n</body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Treatment Response"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid155"
+  }, {
+    "@id" : "_:genid156"
+  }, {
+    "@id" : "_:genid157"
+  }, {
+    "@id" : "_:genid158"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#TreatmentResponseType",
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid30"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#TriggerEvent",
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid35"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#TumorGrade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\nDescribes a tumour in terms of how abnormal the tumour cells are. This is compared to normal cells. It also describes how abnormal the tissues look under a microscope. It describes the <strong style=\"letter-spacing:0.0px;\"><span style=\"letter-spacing:0.0px;;letter-spacing:0.0px;\">biological</span></strong><span style=\"letter-spacing:0.0px;\"> aggressiveness of the tumour. The grade provides some idea of how the cancer might behave. A low-grade cancer is likely to grow more slowly and be less likely to spread than a high grade one.</span></body>\n</html>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tumor Grade"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid159"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#TumorSide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tumor Side"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#Visit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Visit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid160"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#basedOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid37"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "based on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid40"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#basedOnOneOrMoreProcedure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "based on one or more procedure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#isRelatedToACancerCondition"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#basedOnOneOrMoreVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "based on one or more visit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Visit"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canBeOneOrASetOfSingleTreatmentsOrACombinationOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Treatment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can be one or a set of single treatments or a combination of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid43"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canBePrescribedThrough",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid48"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can be prescribed through"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid51"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canBeTheSameOfEvidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#AssertedDate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can be the same of evidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Evidence"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canBeTheSameOfVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#AssertedDate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can be the same of visit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Visit"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canEvolveThroughDiseaseOverTimeAndSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can evolve through disease over time and space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveABiomarkerType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid54"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can have a biomarker type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#BiomarkerType"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveADiseaseExtent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can have a disease extent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveAGenomics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can have a genomics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Genomics"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveATumorGrade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can have a tumor grade"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TumorGrade"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveAnImagingType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid57"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can have an imaging type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#ImagingType"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveComorbidities",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can have comorbidities"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Comorbidities"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Treatment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can have one or more"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#relatedToATreatment"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMoreLoco-regionalSite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can have one or more loco-regional site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Loco-regionalSite"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMoreMetastaticSite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can have one or more metastatic site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#MetastaticSite"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#canPartecipateToClinicalTrials",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "can partecipate to clinical trials"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#ClinicalTrials"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#causedByTriggerEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "caused by trigger event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TriggerEvent"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#choiceFromProcedureDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#AssertedDate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "choice from procedure date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Encounter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#AssertedDate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#PathologicalStage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "defined by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedByBiopsy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid60"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "defined by biopsy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Biopsy"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedBySurgery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#HistologyBehaviour"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "defined by surgery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedThrough",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#ClinicalStage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "defined through"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedThroughBaseOfAssertion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid77"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "defined through base of assertion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#BaseOfAssertion"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedThroughEvidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Genomics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "defined through evidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Evidence"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedThroughImaging",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "defined through imaging"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Imaging"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#definedThrougtImaging",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#BodySite"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "defined througt imaging"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Imaging"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#dependingOnEvidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid64"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "depending on evidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Evidence"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#dependingOnProcedure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid67"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "depending on procedure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#documentedInAReport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "documented in a report"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Report"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#endDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid80"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "end date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#evaluatedDuringAVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "evaluated during a visit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Visit"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasADiseaseStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has a disease status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseStatus"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasALastCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has a last check"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#LastCheck"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasATargetSite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Radiotherapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has a target site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TargetSite"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasATreatmentResponseType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TreatmentResponseType"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasATumorGrade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has a tumor Grade"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TumorGrade"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasAnAssertedDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid70"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has an asserted date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#AssertedDate"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasAnEvolutionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#EvolutionType"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasAnEvolvingLifeStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has an evolving life status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#LifeStatus"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasAnIntent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Treatment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has an intent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Intent"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasCancerCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has cancer condition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasCancerStage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has cancer stage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerStage"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid84"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasEvolvingDemographics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has evolving demographics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Demographics"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasOneOrMoreExtentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has one or more extent type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#ExtentType"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasOneOrMoreVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has one or more visit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Visit"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasReport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has report"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Report"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasTargetSite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Surgery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has target site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TargetSite"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#isAffectedByPatient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is affected by patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Patient"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasCancerCondition"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#isAnOngoing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DrugAdministration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is an ongoing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Immunotherapy"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#isDefinedByBodySite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is defined by body site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#BodySite"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#isDefinedByHistologyBehaviour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is defined by histology behaviour"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#HistologyBehaviour"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#isEvaluatedDuringA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Evidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is evaluated during a"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Visit"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#isRelatedToACancerCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Procedure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is related to a cancer condition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#isTheTargetOfOneOrMoreTreatment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid73"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is the target of one or more treatment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Treatment"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#isUnderOneOrMoreTreatment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is under one or more treatment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Treatment"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#mustBeUpdatedDuringAVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#LastCheck"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "must be updated during a visit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Visit"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#performedOnAPatient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Visit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "performed on a patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Patient"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#hasOneOrMoreVisit"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#relatedToACancerCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "related to a cancer condition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#CancerCondition"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#canEvolveThroughDiseaseOverTimeAndSpace"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#relatedToATreatment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "related to a treatment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#Treatment"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://HL7.eu/ontology/CommonCancerModel#startDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid88"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "start date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+} ]

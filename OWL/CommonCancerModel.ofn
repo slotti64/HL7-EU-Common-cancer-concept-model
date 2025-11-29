@@ -1,0 +1,1533 @@
+Prefix(:=<http://HL7.eu/ontology/CommonCancerModel#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://HL7.eu/ontology/CommonCancerModel>
+<urn:absolute:2.1>
+Annotation(rdfs:label "HL7 Common Cancer Model")
+
+Declaration(Class(:ActiveSurveillance))
+Declaration(Class(:Anti-cancerTreatment))
+Declaration(Class(:AssertedDate))
+Declaration(Class(:Biomarker))
+Declaration(Class(:BiomarkerType))
+Declaration(Class(:Biopsy))
+Declaration(Class(:BodySite))
+Declaration(Class(:CancerCondition))
+Declaration(Class(:CancerStage))
+Declaration(Class(:ClinicalStage))
+Declaration(Class(:ClinicalTrials))
+Declaration(Class(:Comorbidities))
+Declaration(Class(:Demographics))
+Declaration(Class(:DiseaseExtent))
+Declaration(Class(:DiseaseOverTimeAndSpace))
+Declaration(Class(:DrugAdministration))
+Declaration(Class(:Encounter))
+Declaration(Class(:Evidence))
+Declaration(Class(:Genomics))
+Declaration(Class(:HistologyBehaviour))
+Declaration(Class(:Imaging))
+Declaration(Class(:ImagingType))
+Declaration(Class(:Immunotherapy))
+Declaration(Class(:Laboratory))
+Declaration(Class(:LastCheck))
+Declaration(Class(:Location))
+Declaration(Class(:Loco-regionalSite))
+Declaration(Class(:MetastaticSite))
+Declaration(Class(:Morphology))
+Declaration(Class(:PathologicalStage))
+Declaration(Class(:Patient))
+Declaration(Class(:Prescription))
+Declaration(Class(:PrimaryCancer))
+Declaration(Class(:Procedure))
+Declaration(Class(:Radiotherapy))
+Declaration(Class(:Report))
+Declaration(Class(:SecondaryPrimaryCondition))
+Declaration(Class(:Subject))
+Declaration(Class(:Surgery))
+Declaration(Class(:TargetSite))
+Declaration(Class(:Topography))
+Declaration(Class(:Treatment))
+Declaration(Class(:TreatmentPlan))
+Declaration(Class(:TreatmentResponse))
+Declaration(Class(:TumorGrade))
+Declaration(Class(:TumorSide))
+Declaration(Class(:Visit))
+Declaration(ObjectProperty(:basedOn))
+Declaration(ObjectProperty(:basedOnOneOrMoreProcedure))
+Declaration(ObjectProperty(:basedOnOneOrMoreVisit))
+Declaration(ObjectProperty(:canBeOneOrASetOfSingleTreatmentsOrACombinationOf))
+Declaration(ObjectProperty(:canBePrescribedThrough))
+Declaration(ObjectProperty(:canBeTheSameOfEvidence))
+Declaration(ObjectProperty(:canBeTheSameOfVisit))
+Declaration(ObjectProperty(:canEvolveThroughDiseaseOverTimeAndSpace))
+Declaration(ObjectProperty(:canHaveABiomarkerType))
+Declaration(ObjectProperty(:canHaveADiseaseExtent))
+Declaration(ObjectProperty(:canHaveAGenomics))
+Declaration(ObjectProperty(:canHaveATumorGrade))
+Declaration(ObjectProperty(:canHaveAnImagingType))
+Declaration(ObjectProperty(:canHaveComorbidities))
+Declaration(ObjectProperty(:canHaveOneOrMore))
+Declaration(ObjectProperty(:canHaveOneOrMoreLoco-regionalSite))
+Declaration(ObjectProperty(:canHaveOneOrMoreMetastaticSite))
+Declaration(ObjectProperty(:canPartecipateToClinicalTrials))
+Declaration(ObjectProperty(:choiceFromProcedureDate))
+Declaration(ObjectProperty(:definedBy))
+Declaration(ObjectProperty(:definedByBiopsy))
+Declaration(ObjectProperty(:definedBySurgery))
+Declaration(ObjectProperty(:definedThrough))
+Declaration(ObjectProperty(:definedThroughEvidence))
+Declaration(ObjectProperty(:definedThroughImaging))
+Declaration(ObjectProperty(:definedThrougtImaging))
+Declaration(ObjectProperty(:dependingOnEvidence))
+Declaration(ObjectProperty(:dependingOnProcedure))
+Declaration(ObjectProperty(:documentedInAReport))
+Declaration(ObjectProperty(:evaluatedDuringAVisit))
+Declaration(ObjectProperty(:hasALastCheck))
+Declaration(ObjectProperty(:hasATargetSite))
+Declaration(ObjectProperty(:hasATumorGrade))
+Declaration(ObjectProperty(:hasAnAssertedDate))
+Declaration(ObjectProperty(:hasCancerCondition))
+Declaration(ObjectProperty(:hasCancerStage))
+Declaration(ObjectProperty(:hasEvolvingDemographics))
+Declaration(ObjectProperty(:hasOneOrMoreVisit))
+Declaration(ObjectProperty(:hasReport))
+Declaration(ObjectProperty(:hasTargetSite))
+Declaration(ObjectProperty(:isAffectedByPatient))
+Declaration(ObjectProperty(:isAnOngoing))
+Declaration(ObjectProperty(:isDefinedByBodySite))
+Declaration(ObjectProperty(:isDefinedByHistologyBehaviour))
+Declaration(ObjectProperty(:isEvaluatedDuringA))
+Declaration(ObjectProperty(:isRelatedToACancerCondition))
+Declaration(ObjectProperty(:isTheTargetOfOneOrMoreTreatment))
+Declaration(ObjectProperty(:isUnderOneOrMoreTreatment))
+Declaration(ObjectProperty(:mustBeUpdatedDuringAVisit))
+Declaration(ObjectProperty(:performedOnAPatient))
+Declaration(ObjectProperty(:relatedToACancerCondition))
+Declaration(ObjectProperty(:relatedToATreatment))
+Declaration(DataProperty(:causedByTriggerEvent))
+Declaration(DataProperty(:code))
+Declaration(DataProperty(:date))
+Declaration(DataProperty(:definedThroughBaseOfAssertion))
+Declaration(DataProperty(:endDate))
+Declaration(DataProperty(:hasADiseaseStatus))
+Declaration(DataProperty(:hasATreatmentResponseType))
+Declaration(DataProperty(:hasAnEvolutionType))
+Declaration(DataProperty(:hasAnEvolvingLifeStatus))
+Declaration(DataProperty(:hasAnIntent))
+Declaration(DataProperty(:hasDate))
+Declaration(DataProperty(:hasOneOrMoreExtentType))
+Declaration(DataProperty(:site))
+Declaration(DataProperty(:startDate))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#basedOn> (based on)
+
+AnnotationAssertion(rdfs:label :basedOn "based on")
+ObjectPropertyDomain(:basedOn ObjectUnionOf(:Evidence :TreatmentResponse))
+ObjectPropertyRange(:basedOn ObjectUnionOf(:Evidence :Procedure))
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#basedOnOneOrMoreProcedure> (based on one or more procedure)
+
+AnnotationAssertion(rdfs:label :basedOnOneOrMoreProcedure "based on one or more procedure")
+InverseObjectProperties(:basedOnOneOrMoreProcedure :isRelatedToACancerCondition)
+ObjectPropertyDomain(:basedOnOneOrMoreProcedure :CancerCondition)
+ObjectPropertyRange(:basedOnOneOrMoreProcedure :Procedure)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#basedOnOneOrMoreVisit> (based on one or more visit)
+
+AnnotationAssertion(rdfs:label :basedOnOneOrMoreVisit "based on one or more visit")
+ObjectPropertyDomain(:basedOnOneOrMoreVisit :CancerCondition)
+ObjectPropertyRange(:basedOnOneOrMoreVisit :Visit)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canBeOneOrASetOfSingleTreatmentsOrACombinationOf> (can be one or a set of single treatments or a combination of)
+
+AnnotationAssertion(rdfs:label :canBeOneOrASetOfSingleTreatmentsOrACombinationOf "can be one or a set of single treatments or a combination of")
+ObjectPropertyDomain(:canBeOneOrASetOfSingleTreatmentsOrACombinationOf :Treatment)
+ObjectPropertyRange(:canBeOneOrASetOfSingleTreatmentsOrACombinationOf ObjectUnionOf(:ActiveSurveillance :DrugAdministration :Radiotherapy :Surgery))
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canBePrescribedThrough> (can be prescribed through)
+
+AnnotationAssertion(rdfs:label :canBePrescribedThrough "can be prescribed through")
+ObjectPropertyDomain(:canBePrescribedThrough ObjectUnionOf(:DrugAdministration :Radiotherapy))
+ObjectPropertyRange(:canBePrescribedThrough ObjectUnionOf(:Prescription :TreatmentPlan))
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canBeTheSameOfEvidence> (can be the same of evidence)
+
+AnnotationAssertion(rdfs:label :canBeTheSameOfEvidence "can be the same of evidence")
+ObjectPropertyDomain(:canBeTheSameOfEvidence :AssertedDate)
+ObjectPropertyRange(:canBeTheSameOfEvidence :Evidence)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canBeTheSameOfVisit> (can be the same of visit)
+
+AnnotationAssertion(rdfs:label :canBeTheSameOfVisit "can be the same of visit")
+ObjectPropertyDomain(:canBeTheSameOfVisit :AssertedDate)
+ObjectPropertyRange(:canBeTheSameOfVisit :Visit)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canEvolveThroughDiseaseOverTimeAndSpace> (can evolve through disease over time and space)
+
+AnnotationAssertion(rdfs:label :canEvolveThroughDiseaseOverTimeAndSpace "can evolve through disease over time and space")
+InverseObjectProperties(:canEvolveThroughDiseaseOverTimeAndSpace :relatedToACancerCondition)
+ObjectPropertyDomain(:canEvolveThroughDiseaseOverTimeAndSpace :CancerCondition)
+ObjectPropertyRange(:canEvolveThroughDiseaseOverTimeAndSpace :DiseaseOverTimeAndSpace)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canHaveABiomarkerType> (can have a biomarker type)
+
+AnnotationAssertion(rdfs:label :canHaveABiomarkerType "can have a biomarker type")
+ObjectPropertyDomain(:canHaveABiomarkerType ObjectUnionOf(:CancerCondition :DiseaseOverTimeAndSpace))
+ObjectPropertyRange(:canHaveABiomarkerType :BiomarkerType)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canHaveADiseaseExtent> (can have a disease extent)
+
+AnnotationAssertion(rdfs:label :canHaveADiseaseExtent "can have a disease extent")
+ObjectPropertyDomain(:canHaveADiseaseExtent :DiseaseOverTimeAndSpace)
+ObjectPropertyRange(:canHaveADiseaseExtent :DiseaseExtent)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canHaveAGenomics> (can have a genomics)
+
+AnnotationAssertion(rdfs:label :canHaveAGenomics "can have a genomics")
+ObjectPropertyDomain(:canHaveAGenomics :DiseaseOverTimeAndSpace)
+ObjectPropertyRange(:canHaveAGenomics :Genomics)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canHaveATumorGrade> (can have a tumor grade)
+
+AnnotationAssertion(rdfs:label :canHaveATumorGrade "can have a tumor grade")
+ObjectPropertyDomain(:canHaveATumorGrade :DiseaseOverTimeAndSpace)
+ObjectPropertyRange(:canHaveATumorGrade :TumorGrade)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canHaveAnImagingType> (can have an imaging type)
+
+AnnotationAssertion(rdfs:label :canHaveAnImagingType "can have an imaging type")
+ObjectPropertyDomain(:canHaveAnImagingType ObjectUnionOf(:CancerCondition :DiseaseOverTimeAndSpace))
+ObjectPropertyRange(:canHaveAnImagingType :ImagingType)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canHaveComorbidities> (can have comorbidities)
+
+AnnotationAssertion(rdfs:label :canHaveComorbidities "can have comorbidities")
+ObjectPropertyDomain(:canHaveComorbidities :Patient)
+ObjectPropertyRange(:canHaveComorbidities :Comorbidities)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMore> (can have one or more)
+
+AnnotationAssertion(rdfs:label :canHaveOneOrMore "can have one or more")
+InverseObjectProperties(:relatedToATreatment :canHaveOneOrMore)
+ObjectPropertyDomain(:canHaveOneOrMore :Treatment)
+ObjectPropertyRange(:canHaveOneOrMore :TreatmentResponse)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMoreLoco-regionalSite> (can have one or more loco-regional site)
+
+AnnotationAssertion(rdfs:label :canHaveOneOrMoreLoco-regionalSite "can have one or more loco-regional site")
+ObjectPropertyDomain(:canHaveOneOrMoreLoco-regionalSite :DiseaseExtent)
+ObjectPropertyRange(:canHaveOneOrMoreLoco-regionalSite :Loco-regionalSite)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canHaveOneOrMoreMetastaticSite> (can have one or more metastatic site)
+
+AnnotationAssertion(rdfs:label :canHaveOneOrMoreMetastaticSite "can have one or more metastatic site")
+ObjectPropertyDomain(:canHaveOneOrMoreMetastaticSite :DiseaseExtent)
+ObjectPropertyRange(:canHaveOneOrMoreMetastaticSite :MetastaticSite)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#canPartecipateToClinicalTrials> (can partecipate to clinical trials)
+
+AnnotationAssertion(rdfs:label :canPartecipateToClinicalTrials "can partecipate to clinical trials")
+ObjectPropertyDomain(:canPartecipateToClinicalTrials :Patient)
+ObjectPropertyRange(:canPartecipateToClinicalTrials :ClinicalTrials)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#choiceFromProcedureDate> (choice from procedure date)
+
+AnnotationAssertion(rdfs:label :choiceFromProcedureDate "choice from procedure date")
+ObjectPropertyDomain(:choiceFromProcedureDate :AssertedDate)
+ObjectPropertyRange(:choiceFromProcedureDate :Procedure)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#definedBy> (defined by)
+
+AnnotationAssertion(rdfs:label :definedBy "defined by")
+ObjectPropertyDomain(:definedBy :PathologicalStage)
+ObjectPropertyRange(:definedBy :Surgery)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#definedByBiopsy> (defined by biopsy)
+
+AnnotationAssertion(rdfs:label :definedByBiopsy "defined by biopsy")
+ObjectPropertyDomain(:definedByBiopsy ObjectUnionOf(:CancerCondition :HistologyBehaviour :TumorGrade))
+ObjectPropertyRange(:definedByBiopsy :Biopsy)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#definedBySurgery> (defined by surgery)
+
+AnnotationAssertion(rdfs:label :definedBySurgery "defined by surgery")
+ObjectPropertyDomain(:definedBySurgery :HistologyBehaviour)
+ObjectPropertyRange(:definedBySurgery :Surgery)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#definedThrough> (defined through)
+
+AnnotationAssertion(rdfs:label :definedThrough "defined through")
+ObjectPropertyDomain(:definedThrough :ClinicalStage)
+ObjectPropertyRange(:definedThrough :Procedure)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#definedThroughEvidence> (defined through evidence)
+
+AnnotationAssertion(rdfs:label :definedThroughEvidence "defined through evidence")
+ObjectPropertyDomain(:definedThroughEvidence :Genomics)
+ObjectPropertyRange(:definedThroughEvidence :Evidence)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#definedThroughImaging> (defined through imaging)
+
+AnnotationAssertion(rdfs:label :definedThroughImaging "defined through imaging")
+ObjectPropertyDomain(:definedThroughImaging :DiseaseExtent)
+ObjectPropertyRange(:definedThroughImaging :Imaging)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#definedThrougtImaging> (defined througt imaging)
+
+AnnotationAssertion(rdfs:label :definedThrougtImaging "defined througt imaging")
+ObjectPropertyDomain(:definedThrougtImaging :BodySite)
+ObjectPropertyRange(:definedThrougtImaging :Imaging)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#dependingOnEvidence> (depending on evidence)
+
+AnnotationAssertion(rdfs:label :dependingOnEvidence "depending on evidence")
+ObjectPropertyDomain(:dependingOnEvidence ObjectUnionOf(:BiomarkerType :ImagingType))
+ObjectPropertyRange(:dependingOnEvidence :Evidence)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#dependingOnProcedure> (depending on procedure)
+
+AnnotationAssertion(rdfs:label :dependingOnProcedure "depending on procedure")
+ObjectPropertyDomain(:dependingOnProcedure ObjectUnionOf(:BiomarkerType :ImagingType))
+ObjectPropertyRange(:dependingOnProcedure :Procedure)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#documentedInAReport> (documented in a report)
+
+AnnotationAssertion(rdfs:label :documentedInAReport "documented in a report")
+ObjectPropertyDomain(:documentedInAReport :Procedure)
+ObjectPropertyRange(:documentedInAReport :Report)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#evaluatedDuringAVisit> (evaluated during a visit)
+
+AnnotationAssertion(rdfs:label :evaluatedDuringAVisit "evaluated during a visit")
+ObjectPropertyDomain(:evaluatedDuringAVisit :TreatmentResponse)
+ObjectPropertyRange(:evaluatedDuringAVisit :Visit)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#hasALastCheck> (has a last check)
+
+AnnotationAssertion(rdfs:label :hasALastCheck "has a last check")
+ObjectPropertyDomain(:hasALastCheck :Patient)
+ObjectPropertyRange(:hasALastCheck :LastCheck)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#hasATargetSite> (has a target site)
+
+AnnotationAssertion(rdfs:label :hasATargetSite "has a target site")
+ObjectPropertyDomain(:hasATargetSite :Radiotherapy)
+ObjectPropertyRange(:hasATargetSite :TargetSite)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#hasATumorGrade> (has a tumor Grade)
+
+AnnotationAssertion(rdfs:label :hasATumorGrade "has a tumor Grade")
+ObjectPropertyDomain(:hasATumorGrade :CancerCondition)
+ObjectPropertyRange(:hasATumorGrade :TumorGrade)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#hasAnAssertedDate> (has an asserted date)
+
+AnnotationAssertion(rdfs:label :hasAnAssertedDate "has an asserted date")
+ObjectPropertyDomain(:hasAnAssertedDate ObjectUnionOf(:CancerCondition :DiseaseOverTimeAndSpace))
+ObjectPropertyRange(:hasAnAssertedDate :AssertedDate)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#hasCancerCondition> (has cancer condition)
+
+AnnotationAssertion(rdfs:label :hasCancerCondition "has cancer condition")
+InverseObjectProperties(:hasCancerCondition :isAffectedByPatient)
+ObjectPropertyDomain(:hasCancerCondition :Patient)
+ObjectPropertyRange(:hasCancerCondition :CancerCondition)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#hasCancerStage> (has cancer stage)
+
+AnnotationAssertion(rdfs:label :hasCancerStage "has cancer stage")
+ObjectPropertyDomain(:hasCancerStage :CancerCondition)
+ObjectPropertyRange(:hasCancerStage :CancerStage)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#hasEvolvingDemographics> (has evolving demographics)
+
+AnnotationAssertion(rdfs:label :hasEvolvingDemographics "has evolving demographics")
+ObjectPropertyDomain(:hasEvolvingDemographics :Patient)
+ObjectPropertyRange(:hasEvolvingDemographics :Demographics)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#hasOneOrMoreVisit> (has one or more visit)
+
+AnnotationAssertion(rdfs:label :hasOneOrMoreVisit "has one or more visit")
+InverseObjectProperties(:performedOnAPatient :hasOneOrMoreVisit)
+ObjectPropertyDomain(:hasOneOrMoreVisit :Patient)
+ObjectPropertyRange(:hasOneOrMoreVisit :Visit)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#hasReport> (has report)
+
+AnnotationAssertion(rdfs:label :hasReport "has report")
+ObjectPropertyDomain(:hasReport :Surgery)
+ObjectPropertyRange(:hasReport :Report)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#hasTargetSite> (has target site)
+
+AnnotationAssertion(rdfs:label :hasTargetSite "has target site")
+ObjectPropertyDomain(:hasTargetSite :Surgery)
+ObjectPropertyRange(:hasTargetSite :TargetSite)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#isAffectedByPatient> (is affected by patient)
+
+AnnotationAssertion(rdfs:label :isAffectedByPatient "is affected by patient")
+ObjectPropertyDomain(:isAffectedByPatient :CancerCondition)
+ObjectPropertyRange(:isAffectedByPatient :Patient)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#isAnOngoing> (is an ongoing)
+
+AnnotationAssertion(rdfs:label :isAnOngoing "is an ongoing")
+ObjectPropertyDomain(:isAnOngoing :DrugAdministration)
+ObjectPropertyRange(:isAnOngoing :Immunotherapy)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#isDefinedByBodySite> (is defined by body site)
+
+AnnotationAssertion(rdfs:label :isDefinedByBodySite "is defined by body site")
+ObjectPropertyDomain(:isDefinedByBodySite :CancerCondition)
+ObjectPropertyRange(:isDefinedByBodySite :BodySite)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#isDefinedByHistologyBehaviour> (is defined by histology behaviour)
+
+AnnotationAssertion(rdfs:label :isDefinedByHistologyBehaviour "is defined by histology behaviour")
+ObjectPropertyDomain(:isDefinedByHistologyBehaviour :CancerCondition)
+ObjectPropertyRange(:isDefinedByHistologyBehaviour :HistologyBehaviour)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#isEvaluatedDuringA> (is evaluated during a)
+
+AnnotationAssertion(rdfs:label :isEvaluatedDuringA "is evaluated during a")
+ObjectPropertyDomain(:isEvaluatedDuringA :Evidence)
+ObjectPropertyRange(:isEvaluatedDuringA :Visit)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#isRelatedToACancerCondition> (is related to a cancer condition)
+
+AnnotationAssertion(rdfs:label :isRelatedToACancerCondition "is related to a cancer condition")
+ObjectPropertyDomain(:isRelatedToACancerCondition :Procedure)
+ObjectPropertyRange(:isRelatedToACancerCondition :CancerCondition)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#isTheTargetOfOneOrMoreTreatment> (is the target of one or more treatment)
+
+AnnotationAssertion(rdfs:label :isTheTargetOfOneOrMoreTreatment "is the target of one or more treatment")
+ObjectPropertyDomain(:isTheTargetOfOneOrMoreTreatment ObjectUnionOf(:CancerCondition :DiseaseExtent :DiseaseOverTimeAndSpace))
+ObjectPropertyRange(:isTheTargetOfOneOrMoreTreatment :Treatment)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#isUnderOneOrMoreTreatment> (is under one or more treatment)
+
+AnnotationAssertion(rdfs:label :isUnderOneOrMoreTreatment "is under one or more treatment")
+ObjectPropertyDomain(:isUnderOneOrMoreTreatment :Patient)
+ObjectPropertyRange(:isUnderOneOrMoreTreatment :Treatment)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#mustBeUpdatedDuringAVisit> (must be updated during a visit)
+
+AnnotationAssertion(rdfs:label :mustBeUpdatedDuringAVisit "must be updated during a visit")
+ObjectPropertyDomain(:mustBeUpdatedDuringAVisit :LastCheck)
+ObjectPropertyRange(:mustBeUpdatedDuringAVisit :Visit)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#performedOnAPatient> (performed on a patient)
+
+AnnotationAssertion(rdfs:label :performedOnAPatient "performed on a patient")
+ObjectPropertyDomain(:performedOnAPatient :Visit)
+ObjectPropertyRange(:performedOnAPatient :Patient)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#relatedToACancerCondition> (related to a cancer condition)
+
+AnnotationAssertion(rdfs:label :relatedToACancerCondition "related to a cancer condition")
+ObjectPropertyDomain(:relatedToACancerCondition :DiseaseOverTimeAndSpace)
+ObjectPropertyRange(:relatedToACancerCondition :CancerCondition)
+
+# Object Property: <http://HL7.eu/ontology/CommonCancerModel#relatedToATreatment> (related to a treatment)
+
+AnnotationAssertion(rdfs:label :relatedToATreatment "related to a treatment")
+ObjectPropertyDomain(:relatedToATreatment :TreatmentResponse)
+ObjectPropertyRange(:relatedToATreatment :Treatment)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#causedByTriggerEvent> (caused by trigger event)
+
+AnnotationAssertion(rdfs:label :causedByTriggerEvent "caused by trigger event")
+DataPropertyDomain(:causedByTriggerEvent :Procedure)
+DataPropertyRange(:causedByTriggerEvent :TriggerEvent)
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#code> (code)
+
+AnnotationAssertion(rdfs:label :code "code")
+DataPropertyDomain(:code :Encounter)
+DataPropertyRange(:code xsd:string)
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#date> (date)
+
+AnnotationAssertion(rdfs:label :date "date")
+DataPropertyDomain(:date :AssertedDate)
+DataPropertyRange(:date xsd:date)
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#definedThroughBaseOfAssertion> (defined through base of assertion)
+
+AnnotationAssertion(rdfs:label :definedThroughBaseOfAssertion "defined through base of assertion")
+DataPropertyDomain(:definedThroughBaseOfAssertion ObjectUnionOf(:CancerCondition :DiseaseOverTimeAndSpace))
+DataPropertyRange(:definedThroughBaseOfAssertion :BaseOfAssertion)
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#endDate> (end date)
+
+AnnotationAssertion(rdfs:label :endDate "end date")
+DataPropertyDomain(:endDate ObjectUnionOf(:ActiveSurveillance :DrugAdministration :Radiotherapy))
+DataPropertyRange(:endDate xsd:date)
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#hasADiseaseStatus> (has a disease status)
+
+AnnotationAssertion(rdfs:label :hasADiseaseStatus "has a disease status")
+DataPropertyDomain(:hasADiseaseStatus :DiseaseOverTimeAndSpace)
+DataPropertyRange(:hasADiseaseStatus :DiseaseStatus)
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#hasATreatmentResponseType> ()
+
+AnnotationAssertion(rdfs:label :hasATreatmentResponseType "")
+DataPropertyDomain(:hasATreatmentResponseType :TreatmentResponse)
+DataPropertyRange(:hasATreatmentResponseType :TreatmentResponseType)
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#hasAnEvolutionType> ()
+
+AnnotationAssertion(rdfs:label :hasAnEvolutionType "")
+DataPropertyDomain(:hasAnEvolutionType :DiseaseOverTimeAndSpace)
+DataPropertyRange(:hasAnEvolutionType :EvolutionType)
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#hasAnEvolvingLifeStatus> (has an evolving life status)
+
+AnnotationAssertion(rdfs:label :hasAnEvolvingLifeStatus "has an evolving life status")
+DataPropertyDomain(:hasAnEvolvingLifeStatus :Patient)
+DataPropertyRange(:hasAnEvolvingLifeStatus :LifeStatus)
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#hasAnIntent> (has an intent)
+
+AnnotationAssertion(rdfs:label :hasAnIntent "has an intent")
+DataPropertyDomain(:hasAnIntent :Treatment)
+DataPropertyRange(:hasAnIntent :Intent)
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#hasDate> (has date)
+
+AnnotationAssertion(rdfs:label :hasDate "has date")
+DataPropertyDomain(:hasDate ObjectUnionOf(:LastCheck :Procedure :TreatmentResponse))
+DataPropertyRange(:hasDate xsd:date)
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#hasOneOrMoreExtentType> (has one or more extent type)
+
+AnnotationAssertion(rdfs:label :hasOneOrMoreExtentType "has one or more extent type")
+DataPropertyDomain(:hasOneOrMoreExtentType :DiseaseExtent)
+DataPropertyRange(:hasOneOrMoreExtentType :ExtentType)
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#site> (site)
+
+AnnotationAssertion(rdfs:label :site "site")
+DataPropertyDomain(:site :DiseaseExtent)
+DataPropertyRange(:site xsd:string)
+
+# Data Property: <http://HL7.eu/ontology/CommonCancerModel#startDate> (start date)
+
+AnnotationAssertion(rdfs:label :startDate "start date")
+DataPropertyDomain(:startDate ObjectUnionOf(:ActiveSurveillance :DrugAdministration :Radiotherapy))
+DataPropertyRange(:startDate xsd:date)
+
+
+############################
+#   Datatypes
+############################
+
+# Datatype: <http://HL7.eu/ontology/CommonCancerModel#BaseOfAssertion> (<http://HL7.eu/ontology/CommonCancerModel#BaseOfAssertion>)
+
+AnnotationAssertion(rdfs:comment :BaseOfAssertion "the type of procedure on the base of the Cancer Condition was detected. It could be a choice from Visit, Biopsy, Surgery, Imaging, Biomarker, Lab Report, ... ")
+DatatypeDefinition(:BaseOfAssertion DataOneOf("Biomarker" "Biopsy" "Genomics" "Imaging" "Lab Report" "Visit"))
+
+# Datatype: <http://HL7.eu/ontology/CommonCancerModel#DiseaseStatus> (<http://HL7.eu/ontology/CommonCancerModel#DiseaseStatus>)
+
+AnnotationAssertion(rdfs:comment :DiseaseStatus "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+<span style=\"color:black;\">Represents the status of the&#160;<em>Cancer Condition </em>evaluated during a <em>Visit</em>. It could be one of the following:&#160;</span>
+    <ul>
+      <li style=\"color:black;\">
+<span style=\"color:black;\"><em>Progression: </em>in case the cancer is grown respect the previous <em>Visit</em></span>
+
+      </li>
+      <li style=\"color:black;\">
+<span style=\"color:black;\"><em>Stable Disease:&#160;</em>in case the cancer is not grown or&#160;shrunk respect the previous <em>Visit</em></span>
+
+      </li>
+      <li style=\"color:black;\">
+<span style=\"color:black;\"><em>Partial Remission:&#160;</em>in case the cancer shrunk respect the previous <em>Visit</em></span>
+
+      </li>
+      <li style=\"color:black;\">
+<span style=\"color:black;\"><em>Complete Remission: </em>in case the cancer completely disappeared</span>
+
+      </li>
+      <li style=\"color:black;\">
+<span style=\"color:black;\"><em>Recurrence: </em>in case the cancer after complete remission re-appeared or cancer that has recurred (come back), usually after a period of time during which the cancer <strong>could not be&#160;detected</strong>).&#160;</span>
+
+      </li>
+    </ul>
+</body>
+</html>")
+DatatypeDefinition(:DiseaseStatus DataOneOf("Complete Remission" "Disease Recurrence" "Partial Remission" "Progression" "Stable"))
+
+# Datatype: <http://HL7.eu/ontology/CommonCancerModel#EvolutionType> (<http://HL7.eu/ontology/CommonCancerModel#EvolutionType>)
+
+DatatypeDefinition(:EvolutionType DataOneOf("Progression" "Recurrence"))
+
+# Datatype: <http://HL7.eu/ontology/CommonCancerModel#ExtentType> (<http://HL7.eu/ontology/CommonCancerModel#ExtentType>)
+
+AnnotationAssertion(rdfs:comment :ExtentType "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+<span style=\"color:black;\">It can be:</span>
+    <ul>
+      <li>
+<span style=\"color:black;\"><em>Local</em>: in case the&#160;site is the primary site (the site of the&#160;<em>Cancer Condition</em> is the same)</span>
+
+      </li>
+      <li>
+<span style=\"color:black;\"><em>Loco-regional</em>: i<span>n case the site is the primary site and the surrounding anatomical region (also to the regional lymph nodes but with no distant metastases)</span></span>
+
+      </li>
+      <li>
+<span style=\"color:black;\"><em>Metastatic</em>: in case there are also distant metastases.</span>
+
+      </li>
+    </ul>
+</body>
+</html>")
+DatatypeDefinition(:ExtentType DataOneOf("Local" "Loco-regional" "Metastatic"))
+
+# Datatype: <http://HL7.eu/ontology/CommonCancerModel#Intent> (<http://HL7.eu/ontology/CommonCancerModel#Intent>)
+
+AnnotationAssertion(rdfs:comment :Intent "An Intent: indicates if it is curative or not (so only to decrease the symptoms) for the cancer. It can be a choice from: Definitive and Palliative.")
+DatatypeDefinition(:Intent DataOneOf("Definitive (curative)" "Palliative"))
+
+# Datatype: <http://HL7.eu/ontology/CommonCancerModel#LifeStatus> (<http://HL7.eu/ontology/CommonCancerModel#LifeStatus>)
+
+AnnotationAssertion(rdfs:comment :LifeStatus "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+    <p>
+<strong>Life Status (and Cause)</strong><em>&#160;</em>that represent the evolving life status of the patient verified during a <em>Visit, </em><u>after the first treatment</u>, to indicate if it is alive (with disease or not) or dead (with information on it). <span>It can evolve during the time. It could be one of the following:&#160;</span>
+
+    </p>
+
+    <ul>
+      <li data-uuid=\"8065c29c-71d9-4d21-a159-a24e6cbf6e1b\">
+<span><em>Alive, No Evidence of Disease (NED)</em>: in case it is alive and there are no evidence of the disease presence anymore</span>
+
+      </li>
+      <li data-uuid=\"c3b87f80-fffd-44bd-b52f-39a64429950f\">
+<span><em>Dead of Disease (DOD)</em>: in case it is dead with cancer as sure reason</span>
+
+      </li>
+      <li data-uuid=\"b83789d3-805c-41d5-af77-180e4df33856\">
+<span><em>Dead of Other Cause (DOC)</em>: in case it is dead, but the reason is not cancer for sure</span>
+
+      </li>
+      <li data-uuid=\"4819a46a-b4b5-4ad7-b9bc-d8eed79d7ac6\">
+<em>Dead of Unknow Cause (DUC)</em>: <span>in case it is dead, but the reason is unknow (it could be or not cancer)</span>
+
+      </li>
+      <li data-uuid=\"a525ee59-dc19-4a87-8876-ef326ac71576\">
+<span><em>Alive With Disease (AWD)</em>: in case it is alive and the cancer it is still present.</span>
+
+      </li>
+    </ul>
+</body>
+</html>")
+DatatypeDefinition(:LifeStatus DataOneOf("Alive No Evidence of Disease (NED)" "Alive with Disease (AWD)" "Dead of Disease (DOD)" "Dead of Other Cause (DOC)" "Dead of Unknown Cause (DUC)"))
+
+# Datatype: <http://HL7.eu/ontology/CommonCancerModel#TreatmentResponseType> (<http://HL7.eu/ontology/CommonCancerModel#TreatmentResponseType>)
+
+DatatypeDefinition(:TreatmentResponseType DataOneOf("Complete Remission" "Partial Remission" "Progression" "Stable Disease"))
+
+# Datatype: <http://HL7.eu/ontology/CommonCancerModel#TriggerEvent> (<http://HL7.eu/ontology/CommonCancerModel#TriggerEvent>)
+
+DatatypeDefinition(:TriggerEvent DataOneOf("screening"))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#ActiveSurveillance> (Active Surveillance)
+
+AnnotationAssertion(rdfs:comment :ActiveSurveillance "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+It is characterized by a <b>Start Date</b> and an <b>End Date</b>.</body>
+</html>")
+AnnotationAssertion(rdfs:label :ActiveSurveillance "Active Surveillance")
+SubClassOf(:ActiveSurveillance DataExactCardinality(1 :startDate xsd:date))
+SubClassOf(:ActiveSurveillance DataMaxCardinality(1 :endDate xsd:date))
+DisjointClasses(:ActiveSurveillance :DrugAdministration)
+DisjointClasses(:ActiveSurveillance :Radiotherapy)
+DisjointClasses(:ActiveSurveillance :Surgery)
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Anti-cancerTreatment> (Anti-cancer treatment)
+
+AnnotationAssertion(rdfs:label :Anti-cancerTreatment "Anti-cancer treatment")
+EquivalentClasses(:Anti-cancerTreatment :Treatment)
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#AssertedDate> (Asserted Date)
+
+AnnotationAssertion(rdfs:comment :AssertedDate "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+<span>Represents the first data when the presence of the&#160;</span><em><span>Cancer Condition </span></em><span>was detected. It depends on the data source availability and on the cancer type, so it is not possible to define a common date to consider as diagnosis date. The common aspect is that it </span><span>must </span><span>correspond to one documented report (e.g. <em>Visit, Biopsy, Surgery, Imaging, Biomarker, Lab Report, Genomics</em>)</span><span style=\"color:black;\"><span>.</span></span></body>
+</html>")
+AnnotationAssertion(rdfs:label :AssertedDate "Asserted Date")
+SubClassOf(:AssertedDate ObjectExactCardinality(1 :choiceFromProcedureDate))
+SubClassOf(:AssertedDate ObjectMaxCardinality(1 :canBeTheSameOfEvidence))
+SubClassOf(:AssertedDate ObjectMaxCardinality(1 :canBeTheSameOfVisit))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Biomarker> (Biomarker)
+
+AnnotationAssertion(rdfs:label :Biomarker "Biomarker")
+SubClassOf(:Biomarker :Evidence)
+SubClassOf(:Biomarker :Procedure)
+DisjointClasses(:Biomarker :Biopsy)
+DisjointClasses(:Biomarker :Genomics)
+DisjointClasses(:Biomarker :Imaging)
+DisjointClasses(:Biomarker :Laboratory)
+DisjointClasses(:Biomarker :Radiotherapy)
+DisjointClasses(:Biomarker :Surgery)
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#BiomarkerType> (Biomarker Type)
+
+AnnotationAssertion(rdfs:comment :BiomarkerType "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+<span style=\"color:black;\">Represents the type of biomarker on the base of the&#160;<em>Cancer Condition</em></span><span style=\"color:black;\"><span> was detected.&#160;</span></span></body>
+</html>")
+AnnotationAssertion(rdfs:label :BiomarkerType "Biomarker Type")
+SubClassOf(:BiomarkerType ObjectExactCardinality(1 :dependingOnEvidence))
+SubClassOf(:BiomarkerType ObjectExactCardinality(1 :dependingOnProcedure))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Biopsy> (Biopsy)
+
+AnnotationAssertion(rdfs:label :Biopsy "Biopsy")
+SubClassOf(:Biopsy :Procedure)
+DisjointClasses(:Biopsy :Genomics)
+DisjointClasses(:Biopsy :Imaging)
+DisjointClasses(:Biopsy :Laboratory)
+DisjointClasses(:Biopsy :Radiotherapy)
+DisjointClasses(:Biopsy :Surgery)
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#BodySite> (Body Site)
+
+AnnotationAssertion(rdfs:comment :BodySite "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+Represents the first location where Cancer Condition was detected (typically with an Imaging).</body>
+</html>")
+AnnotationAssertion(rdfs:label :BodySite "Body Site")
+EquivalentClasses(:BodySite :Location)
+EquivalentClasses(:BodySite :Topography)
+EquivalentClasses(:BodySite :TumorSide)
+SubClassOf(:BodySite ObjectExactCardinality(1 :definedThrougtImaging))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#CancerCondition> (Cancer Condition)
+
+AnnotationAssertion(rdfs:comment :CancerCondition "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+    <p>
+<span>Represents the diagnosed cancer and the start of the cancer journey, so the start of the </span><em><span>Cancer Condition (First diagnosis)</span></em><span>. It must have&#160;</span>
+
+    </p>
+
+    <ul>
+      <li data-uuid=\"379f04a8-9eaf-4962-ae0c-40e152b01b71\">
+<span>an </span><strong>Histology Behaviour</strong>
+
+      </li>
+      <li data-uuid=\"60e84af7-c098-4567-94cd-723119e19a75\">
+<span>a</span><strong> Body Site</strong>
+
+      </li>
+      <li data-uuid=\"cd1e2386-a86f-4963-a857-86590c4ddda8\">
+<span>a <strong>Tumour Grade</strong></span>
+
+      </li>
+      <li data-uuid=\"fd968eb2-3dc8-4cd0-a3fa-f1fca8a024ca\">
+<span>an </span><strong>Asserted Date</strong>
+
+      </li>
+      <li data-uuid=\"81b90e10-43e5-4469-971b-4536895bfcbd\">
+<span>a </span><strong>Base of Diagnosis</strong>
+
+      </li>
+      <li>
+<span>a </span><strong>Disease Status</strong>
+
+      </li>
+      <li>
+<span><strong>Last Check</strong></span>
+
+      </li>
+    </ul>
+    <p>
+<span>It can have:</span>
+
+    </p>
+
+    <ul>
+      <li data-uuid=\"1cfc0d9d-ffaa-44c0-956f-4998a12e243c\">
+<span>a </span><strong>Imaging Type</strong>
+
+      </li>
+      <li data-uuid=\"63f4efba-63f3-4e29-aa58-40eff428ad2a\">
+<span>a </span><strong>Biomarker Type</strong>
+
+      </li>
+    </ul>
+    <p>
+<b>Note:</b>
+
+    </p>
+
+    <p>
+<span>Each time a patient has a new cancer (so not related and independent from the first one), they have a new&#160;<em>Cancer Condition</em>. In case in time, there is an updated of the <em>Cancer Condition </em>(releted to the same cell type, so depending on the first cancer), it will be reflected in a new <span><em>Disease over time and space </em>instance.&#160;</span></span>
+
+    </p>
+
+    <p>
+<span>If a cancer is metastatic at the&#160;<em>First diagnosis</em>, the information on the metastasis is collected within the&#160;<em>Cancer Stage</em> not in the<em> <span>Disease over time and space instance</span>.</em></span>
+
+    </p>
+
+    <p>
+<span>The couple </span><strong>Histology Behaviour</strong><span> and </span><strong>Body Site</strong><span> identifies the </span><em><span>Cancer Condition.</span></em>
+
+    </p>
+
+</body>
+</html>")
+AnnotationAssertion(rdfs:label :CancerCondition "Cancer Condition")
+EquivalentClasses(:CancerCondition :PrimaryCancer)
+EquivalentClasses(:CancerCondition :SecondaryPrimaryCondition)
+SubClassOf(:CancerCondition ObjectMinCardinality(1 :basedOnOneOrMoreProcedure))
+SubClassOf(:CancerCondition ObjectMinCardinality(1 :basedOnOneOrMoreVisit))
+SubClassOf(:CancerCondition ObjectMinCardinality(1 :canEvolveThroughDiseaseOverTimeAndSpace))
+SubClassOf(:CancerCondition ObjectMinCardinality(1 :hasCancerStage))
+SubClassOf(:CancerCondition ObjectMinCardinality(1 :isAffectedByPatient))
+SubClassOf(:CancerCondition ObjectMinCardinality(1 :isTheTargetOfOneOrMoreTreatment))
+SubClassOf(:CancerCondition ObjectExactCardinality(1 :definedByBiopsy))
+SubClassOf(:CancerCondition ObjectExactCardinality(1 :hasATumorGrade))
+SubClassOf(:CancerCondition ObjectExactCardinality(1 :hasAnAssertedDate))
+SubClassOf(:CancerCondition ObjectMaxCardinality(1 :canHaveABiomarkerType))
+SubClassOf(:CancerCondition ObjectMaxCardinality(1 :canHaveAnImagingType))
+SubClassOf(:CancerCondition DataExactCardinality(1 :definedThroughBaseOfAssertion :BaseOfAssertion))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#CancerStage> (Cancer Stage)
+
+AnnotationAssertion(rdfs:comment :CancerStage "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+    <p>
+<span>Represents the stage of the </span><em><span>Cancer Condition </span></em>at the <em>First Diagnosis</em> and describes the tumour extent <u>at the time of the first definitive treatment</u><span>. </span><span style=\"color:black;\"><span><u>It never evolves</u> during the cancer journey. </span></span><span>The stage can be </span><em><span>Clinical </span></em><span>(is based on </span><em><span>Imaging</span></em><span>) or </span><em><span>Pathological </span></em><span>(is based in </span><em><span>Surgery</span></em><span>).</span>
+
+    </p>
+
+    <p>
+<span>&#160;</span>
+
+    </p>
+
+    <p>
+<span><b>Note:</b></span>
+
+    </p>
+
+    <p>
+<span>In case in time, there is an extension of the <em>Cancer Condition</em> (releted to the same cell type, so depending on the first cancer), it </span><span>will be reflected in a new <span><em>Disease over time and space </em>instance with</span>&#160;</span><em><span>Disease Status</span></em><span> (as </span><em><span>Progression or Recurrence</span></em><span>), while the <em>Cancer Stage</em> will not change.</span>
+
+    </p>
+
+    <p>
+<span>If a cancer is metastatic at the <em>First diagnosis</em>, the information on the metastasis is collected within the&#160;<em>Cancer Stage</em> not in the<em> Disease over time and space </em>instance<em>).</em></span>
+
+    </p>
+
+</body>
+</html>")
+AnnotationAssertion(rdfs:label :CancerStage "Cancer Stage")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#ClinicalStage> (Clinical Stage)
+
+AnnotationAssertion(rdfs:label :ClinicalStage "Clinical Stage")
+SubClassOf(:ClinicalStage :CancerStage)
+SubClassOf(:ClinicalStage ObjectExactCardinality(1 :definedThrough))
+DisjointClasses(:ClinicalStage :PathologicalStage)
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#ClinicalTrials> (Clinical Trials)
+
+AnnotationAssertion(rdfs:comment :ClinicalTrials "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+<span>A patient can participate in trials and represent its purposes and objectives.</span></body>
+</html>")
+AnnotationAssertion(rdfs:label :ClinicalTrials "Clinical Trials")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Comorbidities> (Comorbidities)
+
+AnnotationAssertion(rdfs:comment :Comorbidities "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+<span>Represent the possible other relevant diseases that affect them. It can evolve during the time.</span></body>
+</html>")
+AnnotationAssertion(rdfs:label :Comorbidities "Comorbidities")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Demographics> (Demographics)
+
+AnnotationAssertion(rdfs:comment :Demographics "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+<span>Represents demographic information (e.g. the sex, birth date (or only year)). It can evolve during the time.</span></body>
+</html>")
+AnnotationAssertion(rdfs:label :Demographics "Demographics")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#DiseaseExtent> (Disease Extent)
+
+AnnotationAssertion(rdfs:comment :DiseaseExtent "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+<span style=\"color:black;\">r</span>epresent the location where the cancer is extended at the time of the assertion (typically evaluated with an <em style=\"letter-spacing:0.0px;color:black;\"><span style=\"letter-spacing:0.0px; color:black;;letter-spacing:0.0px;\">Imaging</span></em><span style=\"color:black;;letter-spacing:0.0px;\">). It has</span>
+    <ul>
+      <li data-uuid=\"633dbd01-7bcf-4bcf-9131-c493d4de20ca\">
+<span style=\"color:black;\">one or more <em>Extent type </em>that can be:</span>
+        <ul>
+          <li>
+<span style=\"color:black;\"><em>Local</em>: in case the&#160;site is the primary site (the site of the&#160;<em>Cancer Condition</em> is the same)</span>
+
+          </li>
+          <li>
+<span style=\"color:black;\"><em>Loco-regional</em>: i<span>n case the site is the primary site and the surrounding anatomical region (also to the regional lymph nodes but with no distant metastases)</span></span>
+
+          </li>
+          <li>
+<span style=\"color:black;\"><em>Metastatic</em>: in case there are also distant metastases.</span>
+
+          </li>
+        </ul>
+
+      </li>
+      <li data-uuid=\"30d97dd8-2962-42ff-9eca-81d41442dbd9\">
+<span style=\"color:black;\">can have one or more:</span>
+        <ul>
+          <li>
+<span style=\"color:black;\"><em>Loco-regional site</em>: the specific site of the surrounding anatomical region involved&#160;</span>
+
+          </li>
+          <li>
+<span style=\"color:black;\"><em>Metastatic site</em>: the specific site of the metastases.</span>
+
+          </li>
+        </ul>
+
+      </li>
+    </ul>
+</body>
+</html>")
+AnnotationAssertion(rdfs:label :DiseaseExtent "Disease Extent")
+SubClassOf(:DiseaseExtent ObjectMinCardinality(1 :canHaveOneOrMoreLoco-regionalSite))
+SubClassOf(:DiseaseExtent ObjectMinCardinality(1 :canHaveOneOrMoreMetastaticSite))
+SubClassOf(:DiseaseExtent ObjectMinCardinality(1 :definedThroughImaging))
+SubClassOf(:DiseaseExtent ObjectMinCardinality(1 :isTheTargetOfOneOrMoreTreatment))
+SubClassOf(:DiseaseExtent DataMinCardinality(1 :hasOneOrMoreExtentType :ExtentType))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#DiseaseOverTimeAndSpace> (Disease over time and space)
+
+AnnotationAssertion(rdfs:comment :DiseaseOverTimeAndSpace "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+    <p>
+<span>Represents the evolution over the time and over the space of the <em>Cancer Condition. </em>Every time that there is a new evaluation, there will be a new instance of<em> Disease over time and space </em>that</span><span style=\"letter-spacing:0.0px;\">&#160;<strong>must </strong>have:</span>
+
+    </p>
+
+    <ul>
+      <li data-uuid=\"fc4b3f83-987d-4833-b7e7-1334a3009278\" style=\"color:black;\">
+<span style=\"color:black;\">a <strong>Disease Status</strong></span>
+
+      </li>
+      <li data-uuid=\"79a7cfe0-2c6d-4d8f-b50d-f484fe04c070\">
+an <strong>Asserted Date</strong>
+
+      </li>
+      <li data-uuid=\"89aacef4-88a2-4be2-8101-fb9b558b7642\">
+a <strong>Base of Assertion</strong>:
+
+      </li>
+    </ul>
+    <p>
+and it <strong>can </strong>have:
+
+    </p>
+
+    <ul>
+      <li style=\"color:black;\">
+<span style=\"color:black;\"><strong>Disease Extent: </strong></span><span style=\"color:black;;letter-spacing:0.0px;\">It has</span>
+        <ul>
+          <li data-uuid=\"633dbd01-7bcf-4bcf-9131-c493d4de20ca\">
+<span style=\"color:black;\">one or more <em>Extent type </em></span><span style=\"color:black;\">that </span><span style=\"color:black;\">can have one or more:</span>
+            <ul>
+              <li>
+<span style=\"color:black;\"><em>Loco-regional site</em></span>
+
+              </li>
+              <li>
+<span style=\"color:black;\"><em>Metastatic site</em></span>
+
+              </li>
+            </ul>
+
+          </li>
+        </ul>
+
+      </li>
+      <li data-uuid=\"2cf5ab99-8eb3-4782-bf5b-059cc0b5f203\" style=\"color:black;\">
+<span style=\"color:black;\">a <strong>Tumour Grade</strong></span>
+
+      </li>
+      <li data-uuid=\"28a187ea-32b9-41fa-830f-e9b7679efb43\" style=\"color:black;\">
+<span style=\"color:black;\">a&#160;<strong>Imaging Type</strong></span>
+
+      </li>
+      <li data-uuid=\"730da9f5-36b6-4948-b7ff-962ec2f353ad\" style=\"color:black;\">
+<span style=\"color:black;\">a <strong>Biomarker Type</strong></span>
+
+      </li>
+      <li data-uuid=\"91d132ff-a787-4bd0-a1b4-c81968a4151e\" style=\"color:black;\">
+<span style=\"color:black;\">a <strong>Genomics</strong></span>
+
+      </li>
+    </ul>
+    <p>
+<b>Note:</b>
+
+    </p>
+
+    <p>
+<span style=\"color:black;\">After the First Diagnosis, every time that there is an evaluation of the Cancer Codition during a <em>Visit</em>,&#160;a new instance of <em>Disease Evolution </em>is created.</span>
+
+    </p>
+
+    <p>
+<span style=\"color:black;\">If a cancer is metastatic at the&#160;<em>First diagnosis</em>, the information on the metastasis is collected within the <em>Cancer Stage</em> not in the<em> Disease Evolution over time and space.</em></span>
+
+    </p>
+
+</body>
+</html>")
+AnnotationAssertion(rdfs:label :DiseaseOverTimeAndSpace "Disease over time and space")
+SubClassOf(:DiseaseOverTimeAndSpace ObjectMinCardinality(1 :isTheTargetOfOneOrMoreTreatment))
+SubClassOf(:DiseaseOverTimeAndSpace ObjectExactCardinality(1 :hasAnAssertedDate))
+SubClassOf(:DiseaseOverTimeAndSpace ObjectExactCardinality(1 :relatedToACancerCondition))
+SubClassOf(:DiseaseOverTimeAndSpace ObjectMaxCardinality(1 :canHaveABiomarkerType))
+SubClassOf(:DiseaseOverTimeAndSpace ObjectMaxCardinality(1 :canHaveADiseaseExtent))
+SubClassOf(:DiseaseOverTimeAndSpace ObjectMaxCardinality(1 :canHaveAGenomics))
+SubClassOf(:DiseaseOverTimeAndSpace ObjectMaxCardinality(1 :canHaveATumorGrade))
+SubClassOf(:DiseaseOverTimeAndSpace ObjectMaxCardinality(1 :canHaveAnImagingType))
+SubClassOf(:DiseaseOverTimeAndSpace DataExactCardinality(1 :hasADiseaseStatus :DiseaseStatus))
+SubClassOf(:DiseaseOverTimeAndSpace DataExactCardinality(1 :hasAnEvolutionType :EvolutionType))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#DrugAdministration> (Drug Administration)
+
+AnnotationAssertion(rdfs:comment :DrugAdministration "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+<span>It is characterized by a </span><strong>Start Date,</strong><span> an</span><strong> End Date </strong><span>and a possible indication if the therapy is </span><strong>Ongoing </strong><span>(in case of Immunotherapy).</span></body>
+</html>")
+AnnotationAssertion(rdfs:label :DrugAdministration "Drug Administration")
+SubClassOf(:DrugAdministration ObjectMaxCardinality(1 :isAnOngoing))
+SubClassOf(:DrugAdministration DataExactCardinality(1 :startDate xsd:date))
+SubClassOf(:DrugAdministration DataMaxCardinality(1 :endDate xsd:date))
+DisjointClasses(:DrugAdministration :Radiotherapy)
+DisjointClasses(:DrugAdministration :Surgery)
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Encounter> (Encounter)
+
+AnnotationAssertion(rdfs:label :Encounter "Encounter")
+EquivalentClasses(:Encounter :Visit)
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Evidence> (Evidence)
+
+AnnotationAssertion(rdfs:label :Evidence "Evidence")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Genomics> (Genomics)
+
+AnnotationAssertion(rdfs:label :Genomics "Genomics")
+SubClassOf(:Genomics :Evidence)
+SubClassOf(:Genomics :Procedure)
+SubClassOf(:Genomics ObjectExactCardinality(1 :definedThroughEvidence))
+DisjointClasses(:Genomics :Imaging)
+DisjointClasses(:Genomics :Laboratory)
+DisjointClasses(:Genomics :Radiotherapy)
+DisjointClasses(:Genomics :Surgery)
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#HistologyBehaviour> (Histology Behaviour)
+
+AnnotationAssertion(rdfs:comment :HistologyBehaviour "Histology describes the cell type of the neoplasm and the behaviour describes whether a tumour is malignant or benign, whether it is a carcinoma in situ or a neoplasm of uncertain malignancy. Typicallycally it is defined with Surgery and Biopsy). ")
+AnnotationAssertion(rdfs:label :HistologyBehaviour "Histology Behaviour")
+EquivalentClasses(:HistologyBehaviour :Morphology)
+SubClassOf(:HistologyBehaviour ObjectExactCardinality(1 :definedByBiopsy))
+SubClassOf(:HistologyBehaviour ObjectExactCardinality(1 :definedBySurgery))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Imaging> (Imaging)
+
+AnnotationAssertion(rdfs:label :Imaging "Imaging")
+SubClassOf(:Imaging :Evidence)
+SubClassOf(:Imaging :Procedure)
+DisjointClasses(:Imaging :Laboratory)
+DisjointClasses(:Imaging :Radiotherapy)
+DisjointClasses(:Imaging :Surgery)
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#ImagingType> (Imaging Type)
+
+AnnotationAssertion(rdfs:comment :ImagingType "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+<span>Represents the type of image on the base of the Cancer Condition was detected</span></body>
+</html>")
+AnnotationAssertion(rdfs:label :ImagingType "Imaging Type")
+SubClassOf(:ImagingType ObjectExactCardinality(1 :dependingOnEvidence))
+SubClassOf(:ImagingType ObjectExactCardinality(1 :dependingOnProcedure))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Immunotherapy> (Immunotherapy)
+
+AnnotationAssertion(rdfs:comment :Immunotherapy "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+A type of therapy that uses substances to stimulate or suppress the immune system to help the body fight cancer, infection, and other diseases.</body>
+</html>")
+AnnotationAssertion(rdfs:label :Immunotherapy "Immunotherapy")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Laboratory> (Laboratory)
+
+AnnotationAssertion(rdfs:label :Laboratory "Laboratory")
+SubClassOf(:Laboratory :Evidence)
+SubClassOf(:Laboratory :Procedure)
+DisjointClasses(:Laboratory :Radiotherapy)
+DisjointClasses(:Laboratory :Surgery)
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#LastCheck> (Last Check)
+
+AnnotationAssertion(rdfs:comment :LastCheck "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+    <p>
+<span>Represent the date of the <em>Visit </em>in which the<em> Cancer Condition</em> has been evaluated.</span>
+
+    </p>
+
+</body>
+</html>")
+AnnotationAssertion(rdfs:label :LastCheck "Last Check")
+SubClassOf(:LastCheck ObjectExactCardinality(1 :mustBeUpdatedDuringAVisit))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Location> (Location)
+
+AnnotationAssertion(rdfs:label :Location "Location")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Loco-regionalSite> (Loco-regional Site)
+
+AnnotationAssertion(rdfs:comment :Loco-regionalSite "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+The specific site of the surrounding anatomical region involved</body>
+</html>")
+AnnotationAssertion(rdfs:label :Loco-regionalSite "Loco-regional Site")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#MetastaticSite> (Metastatic Site)
+
+AnnotationAssertion(rdfs:comment :MetastaticSite "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+<span style=\"color:black;\">The specific site of the metastases.</span></body>
+</html>")
+AnnotationAssertion(rdfs:label :MetastaticSite "Metastatic Site")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Morphology> (Morphology)
+
+AnnotationAssertion(rdfs:label :Morphology "Morphology")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#PathologicalStage> (Pathological Stage)
+
+AnnotationAssertion(rdfs:label :PathologicalStage "Pathological Stage")
+SubClassOf(:PathologicalStage :CancerStage)
+SubClassOf(:PathologicalStage ObjectExactCardinality(1 :definedBy))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Patient> (Patient)
+
+AnnotationAssertion(rdfs:comment :Patient "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+    <p>
+<span>Represents the subject that is affected by one or more </span><em><span>Cancer Conditions</span></em><span>. It has:&#160;</span>
+
+    </p>
+
+    <ul>
+      <li data-uuid=\"6ff77ae1-b454-4c82-9527-00b35041611b\">
+<strong>Demographics</strong>
+
+      </li>
+      <li data-uuid=\"38e01979-a40f-4a47-a900-728f87322b0d\">
+<strong>Life Status (and Cause)</strong>
+
+      </li>
+      <li data-uuid=\"38e01979-a40f-4a47-a900-728f87322b0d\">
+<span><strong>Last Check</strong> </span>
+
+      </li>
+    </ul>
+    <p>
+<span>It can have:</span>
+
+    </p>
+
+    <ul>
+      <li data-uuid=\"36585d23-981d-4987-9962-6fdc00fa3b86\">
+<span>one or more&#160;</span><strong>Comorbidities</strong>
+
+      </li>
+    </ul>
+    <p>
+<b>Note:       
+</b><br><em><span>Life Status (and Cause), Demographics&#160;</span></em><span>and </span><em><span>Comorbidity </span></em><span>can evolve during the journey.&#160;</span>
+
+    </p>
+
+</body>
+</html>")
+AnnotationAssertion(rdfs:label :Patient "Patient")
+EquivalentClasses(:Patient :Subject)
+SubClassOf(:Patient ObjectMinCardinality(1 :canHaveComorbidities))
+SubClassOf(:Patient ObjectMinCardinality(1 :hasCancerCondition))
+SubClassOf(:Patient ObjectMinCardinality(1 :hasOneOrMoreVisit))
+SubClassOf(:Patient ObjectMinCardinality(1 :isUnderOneOrMoreTreatment))
+SubClassOf(:Patient ObjectExactCardinality(1 :hasALastCheck))
+SubClassOf(:Patient ObjectExactCardinality(1 :hasEvolvingDemographics))
+SubClassOf(:Patient DataExactCardinality(1 :hasAnEvolvingLifeStatus :LifeStatus))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Prescription> (Prescription)
+
+AnnotationAssertion(rdfs:label :Prescription "Prescription")
+DisjointClasses(:Prescription :TreatmentPlan)
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#PrimaryCancer> (Primary Cancer)
+
+AnnotationAssertion(rdfs:label :PrimaryCancer "Primary Cancer")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Procedure> (Procedure)
+
+AnnotationAssertion(rdfs:label :Procedure "Procedure")
+SubClassOf(:Procedure ObjectExactCardinality(1 :documentedInAReport))
+SubClassOf(:Procedure ObjectExactCardinality(1 :isRelatedToACancerCondition))
+SubClassOf(:Procedure DataExactCardinality(1 :causedByTriggerEvent :TriggerEvent))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Radiotherapy> (Radiotherapy)
+
+AnnotationAssertion(rdfs:comment :Radiotherapy "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+It is characterized by a <b>Start Date,</b> an <b>End Date</b> and a <b>Target Site</b>.</body>
+</html>")
+AnnotationAssertion(rdfs:label :Radiotherapy "Radiotherapy")
+SubClassOf(:Radiotherapy :Procedure)
+SubClassOf(:Radiotherapy ObjectExactCardinality(1 :hasATargetSite))
+SubClassOf(:Radiotherapy DataExactCardinality(1 :startDate xsd:date))
+SubClassOf(:Radiotherapy DataMaxCardinality(1 :endDate xsd:date))
+DisjointClasses(:Radiotherapy :Surgery)
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Report> (Report)
+
+AnnotationAssertion(rdfs:label :Report "Report")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#SecondaryPrimaryCondition> (Secondary Primary Condition)
+
+AnnotationAssertion(rdfs:label :SecondaryPrimaryCondition "Secondary Primary Condition")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Subject> (Subject)
+
+AnnotationAssertion(rdfs:label :Subject "Subject")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Surgery> (Surgery)
+
+AnnotationAssertion(rdfs:comment :Surgery "It is characterized by a Date and a Target Site.")
+AnnotationAssertion(rdfs:label :Surgery "Surgery")
+SubClassOf(:Surgery :Procedure)
+SubClassOf(:Surgery ObjectExactCardinality(1 :hasReport))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#TargetSite> (Target Site)
+
+AnnotationAssertion(rdfs:label :TargetSite "Target Site")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Topography> (Topography)
+
+AnnotationAssertion(rdfs:label :Topography "Topography")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Treatment> (Treatment)
+
+AnnotationAssertion(rdfs:comment :Treatment "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+    <p>
+<span>Represents the single or combination of procedures and therapy defined to treat a </span><em><span>Cancer Condition or a </span><span style=\"color:black;\"><span>Disease Extent</span></span></em><span>.</span><b>Note:</b>
+
+    </p>
+
+    <p>
+<span>Also Diet or Exercise can be prescribed </span><em><span>Treatments </span></em><span>but are not considered for the first period.&#160;</span>
+
+    </p>
+
+    <p>
+<span>A single </span><em><span>Treatment </span></em><span>can evolve during the time.</span>
+
+    </p>
+
+    <p>
+<span>&#160;</span>
+
+    </p>
+
+    <p>
+<span><b>Note:</b></span>
+
+    </p>
+
+    <p>
+<span>Tipically it is very difficult to define if the target is the <em>Cancer Condition</em> or to a specific <em>Diasease Extent</em>.</span>
+
+    </p>
+
+    <p>
+<span>Also Diet or Exercise can be prescribed&#160;</span><em><span>Treatments </span></em><span>but are not considered for the first period.&#160;</span><span> </span>
+
+    </p>
+
+</body>
+</html>")
+AnnotationAssertion(rdfs:label :Treatment "Treatment")
+SubClassOf(:Treatment ObjectMinCardinality(1 :canBeOneOrASetOfSingleTreatmentsOrACombinationOf))
+SubClassOf(:Treatment ObjectMinCardinality(1 :canHaveOneOrMore))
+SubClassOf(:Treatment DataExactCardinality(1 :hasAnIntent :Intent))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#TreatmentPlan> (Treatment Plan)
+
+AnnotationAssertion(rdfs:comment :TreatmentPlan "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+    <p>
+<span>It could be useful to record not only the actual treatment, but also what was planned. In fact, the </span><em><span>Treatment </span></em><span>can change based on the </span><em><span>Treatment </span></em><span>Response. It could be also useful to consider guidelines and if a patient has agreed or not.</span>
+
+    </p>
+
+</body>
+</html>")
+AnnotationAssertion(rdfs:label :TreatmentPlan "Treatment Plan")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#TreatmentResponse> (Treatment Response)
+
+AnnotationAssertion(rdfs:comment :TreatmentResponse "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+    <p>
+<span>Represents the standard way to measure how well a cancer patient responds to a single <em>Treatment</em>. It is based on whether tumours shrink, stay the same, or get bigger.&#160;</span><span style=\"color:black;\"><span><span>It i</span></span><span>s evaluated by cli</span></span><span>nician during a&#160;</span><em><span>Visit </span></em><span>based on an </span><em><span>Evidence</span></em><span>. It can be one of the following:</span>
+
+    </p>
+
+    <ul>
+      <li data-uuid=\"46f92cde-2d84-4b36-b0c5-28514261826b\">
+<em><span>Progression</span></em><span> (in case the cancer is grown respect the previous </span><em><span>Visit</span></em><span>)</span>
+
+      </li>
+      <li data-uuid=\"4ca02e14-9620-4a80-8af9-5e5ca06ae281\">
+<em><span>Stable Disease</span></em><span> (in case the cancer is not changed respect the previous </span><em><span>Visit</span></em><span>)</span>
+
+      </li>
+      <li data-uuid=\"6582ab26-40b1-4a96-b4de-5d2b14c8e410\">
+<em><span>Partial Remission </span></em><span>(in case the cancer shrunk respect the previous </span><em><span>Visit</span></em><span>)</span>
+
+      </li>
+      <li data-uuid=\"9ce790bf-ca0d-4a0a-8351-f53f5e105c43\">
+<span><em>Complete </em>Remission (in case the cancer completely disappeared).</span>
+
+      </li>
+    </ul>
+    <p>
+<span>It must have:</span>
+
+    </p>
+
+    <ul>
+      <li data-uuid=\"103aecff-236c-4c3b-a321-4c85cde67171\">
+<span>a </span><strong>Based on</strong><span>:&#160; the type of </span><em><span>Evidence </span></em><span>on the base of the response is evaluated during the </span><em><span>Visit</span></em><span>. It could be a choice from </span><em><span>Imaging, Lab Report, Biomarker, ...</span></em>
+
+      </li>
+      <li data-uuid=\"0bfe6813-56ec-4694-a2d4-9c6fb2e01b6d\">
+<span>a </span><strong>Date</strong><span>: it depends on the data source availability and so it is not possible to define a common date to consider as response evaluation date. It could be the </span><em><span>Visit </span></em><span>date or the date of the </span><em><span>Evidence. </span></em><span>The common aspect is that it </span><span>must </span><span>correspond to one documented report (e.g. Visit, Imaging, Biomarker, Lab Report).</span>
+
+      </li>
+    </ul>
+    <p>
+<b>Note:</b>
+
+    </p>
+
+    <p>
+<span>It could seem like a repetition of the </span><em><span>Disease Status</span></em><span>, but it doesn&rsquo;t. It is important to have </span><em><span>Treatment Response</span></em><span> and </span><em><span>Disease Status</span></em><span> separated because they have different purposes. The </span><em><span>Treatment Response</span></em><span> is used to evaluate the effects of the </span><em><span>Treatment </span></em><span>while </span><em><span>Disease Status</span></em><span> is to represent the evolution of the </span><em><span>Cancer Condition</span></em><span> over the time.</span>
+
+    </p>
+
+    <p>
+It is the <em>Disease Status </em>that evolves over the time not the <em>Treatment Response</em>
+
+    </p>
+
+</body>
+</html>")
+AnnotationAssertion(rdfs:label :TreatmentResponse "Treatment Response")
+SubClassOf(:TreatmentResponse ObjectExactCardinality(1 :basedOn))
+SubClassOf(:TreatmentResponse ObjectExactCardinality(1 :evaluatedDuringAVisit))
+SubClassOf(:TreatmentResponse ObjectExactCardinality(1 :relatedToATreatment))
+SubClassOf(:TreatmentResponse DataExactCardinality(1 :hasATreatmentResponseType :TreatmentResponseType))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#TumorGrade> (Tumor Grade)
+
+AnnotationAssertion(rdfs:comment :TumorGrade "<html>
+  <head>
+		<style>
+			p {padding:0px; margin:0px;}
+		</style>
+	</head>
+  <body>
+Describes a tumour in terms of how abnormal the tumour cells are. This is compared to normal cells. It also describes how abnormal the tissues look under a microscope. It describes the <strong style=\"letter-spacing:0.0px;\"><span style=\"letter-spacing:0.0px;;letter-spacing:0.0px;\">biological</span></strong><span style=\"letter-spacing:0.0px;\"> aggressiveness of the tumour. The grade provides some idea of how the cancer might behave. A low-grade cancer is likely to grow more slowly and be less likely to spread than a high grade one.</span></body>
+</html>")
+AnnotationAssertion(rdfs:label :TumorGrade "Tumor Grade")
+SubClassOf(:TumorGrade ObjectExactCardinality(1 :definedByBiopsy))
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#TumorSide> (Tumor Side)
+
+AnnotationAssertion(rdfs:label :TumorSide "Tumor Side")
+
+# Class: <http://HL7.eu/ontology/CommonCancerModel#Visit> (Visit)
+
+AnnotationAssertion(rdfs:label :Visit "Visit")
+SubClassOf(:Visit ObjectExactCardinality(1 :performedOnAPatient))
+
+
+)
+
+## Generated using the Concept Modeler (2024x Refresh3, build 20250512_1710-54c4c136) on 2025-11-28 at 23:40:07 GMT

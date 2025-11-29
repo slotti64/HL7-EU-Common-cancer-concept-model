@@ -14,7 +14,9 @@ For comprehensive information about the overall project, please refer to the [HL
 
 This initiative employs a combined model-driven and LLM-assisted approach to achieve several key objectives. 
 The primary goals include the formalization and consolidation of the discussed Concept Model, integration with the HL7 tooling ecosystem, and systematic mapping from ontological concepts to FHIR resources. 
+
 Moreover, Ontologies are increasingly recognized as a key complement to Large Language Models (LLM), enabling more structured and semantically grounded GenAI applications. This synergy offers particular promises. As an example, enhancing data analysis through Retrieval-Augmented Generation (RAG) techniques. 
+
 The underlying objective is to investigate the reciprocal relationship between artificial intelligence and healthcare standards—exploring not only how AI technologies can support and enhance standards development, but also how formal standards and ontological frameworks can improve AI reliability and precision.
 
 ### Generated Artifacts

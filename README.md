@@ -40,6 +40,7 @@ A Python utility ([owl2plantuml_v17.py](https://github.com/slotti64/HL7-EU-Commo
 ### Documentation
 
 The presentation delivered at the Madrid Working Group Meeting (May 2025) can be accessed [here](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/Presentations/Common%20Cancer%20Model%20-%20Madrid%20WGM%20Presentation.pptx).
+The presentation for the Cologne Working Group Meeting (December 2025) can be accessed [here](https://github.com/slotti64/HL7-EU-Common-cancer-concept-model/blob/main/Presentations/Common_Cancer_Model_Ontology-Koln_EU_WGM_Presentation.pptx).
 
 ### Current Model Diagram
 
